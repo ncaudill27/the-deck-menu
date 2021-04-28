@@ -1,0 +1,48 @@
+export default {
+  title: "Wine",
+  name: "wine",
+  type: "document",
+  fields: [
+    {
+      name: "name",
+      type: "string",
+      title: "Name",
+    },
+    {
+      name: "price",
+      type: "number",
+      title: "Price",
+    },
+    {
+      name: "type",
+      type: "string",
+      title: "Type",
+      options: {
+        list: [
+          {title: 'Red', value: 'red'},
+          {title: 'White', value: 'wine'},
+          {title: 'Sparkling', value: 'sparkling'}
+        ],
+        layout: 'radio'
+      }
+    },
+    {
+      name: "mainImage",
+      type: "mainImage",
+      title: "Main image",
+    },
+    {
+      name: "categories",
+      type: "array",
+      title: "Categories",
+      of: [
+        {
+          type: "reference",
+          to: {
+            type: "category",
+          },
+        },
+      ],
+    },
+  ],
+};

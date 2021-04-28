@@ -8,6 +8,9 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 import category from "./documents/category";
 import coffee from "./documents/coffee";
 import food from './documents/food';
+import wine from './documents/wine';
+import beer from './documents/beer';
+import cocktail from './documents/cocktail';
 import siteSettings from "./documents/siteSettings";
 
 // Object types
@@ -15,6 +18,7 @@ import bodyPortableText from "./objects/bodyPortableText";
 import bioPortableText from "./objects/bioPortableText";
 import excerptPortableText from "./objects/excerptPortableText";
 import mainImage from "./objects/mainImage";
+import ingredientCocktail from './objects/ingredientCocktail';
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,8 +32,12 @@ export default createSchema({
     siteSettings,
     coffee,
     food,
+    wine,
+    beer,
+    cocktail,
     category,
     mainImage,
+    ingredientCocktail,
     bodyPortableText,
     bioPortableText,
     excerptPortableText,

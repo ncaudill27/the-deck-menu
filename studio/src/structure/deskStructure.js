@@ -1,5 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { MdLocalCafe, MdRestaurantMenu, MdSettings } from "react-icons/md";
+import { MdFilter, MdLocalBar, MdLocalCafe, MdLocalDrink, MdOpacity, MdRestaurantMenu, MdSettings } from "react-icons/md";
 import { MdPerson, MdDescription, MdLocalOffer } from "react-icons/md";
 import IframePreview from "../previews/IframePreview";
 
@@ -64,6 +64,21 @@ export default () =>
         .schemaType("food")
         .child(S.documentTypeList("food").title("Menu Items")),
       S.listItem()
+        .title("Wine")
+        .icon(MdOpacity)
+        .schemaType("wine")
+        .child(S.documentTypeList("wine").title("Wine List")),
+      S.listItem()
+        .title("Beer")
+        .icon(MdLocalDrink)
+        .schemaType("beer")
+        .child(S.documentTypeList("beer").title("Beer List")),
+      S.listItem()
+        .title("Cocktails")
+        .icon(MdLocalBar)
+        .schemaType("cocktail")
+        .child(S.documentTypeList("cocktail").title("Cocktail List")),
+      S.listItem()
         .title("Categories")
         .icon(MdLocalOffer)
         .schemaType("category")
@@ -73,7 +88,7 @@ export default () =>
       // defined the structure above.
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !["category", "food", "coffee", "siteSettings"].includes(
+          !["category", "food", "coffee", "wine", "beer", "cocktail", "siteSettings"].includes(
             listItem.getId()
           )
       ),
