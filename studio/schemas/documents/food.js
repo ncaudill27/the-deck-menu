@@ -1,8 +1,7 @@
 export default {
-  name: "coffee",
+  name: "food",
   type: "document",
-  title: "Coffee",
-  description: "Coffee drinks and pastries",
+  title: "Food",
   fields: [
     {
       name: "name",
@@ -13,6 +12,12 @@ export default {
       name: "price",
       type: "number",
       title: "Price",
+    },
+    {
+      title: 'Ingredients',
+      name: 'ingredients',
+      type: 'array',
+      of: [{type: 'string'}]
     },
     {
       name: "mainImage",
