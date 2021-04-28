@@ -1,5 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { MdSettings } from "react-icons/md";
+import { MdLocalCafe, MdSettings } from "react-icons/md";
 import { MdPerson, MdDescription, MdLocalOffer } from "react-icons/md";
 import IframePreview from "../previews/IframePreview";
 
@@ -54,15 +54,10 @@ export default () =>
         ),
       S.divider(),
       S.listItem()
-        .title("Blog posts")
-        .icon(MdDescription)
-        .schemaType("post")
-        .child(S.documentTypeList("post").title("Blog posts")),
-      S.listItem()
-        .title("Authors")
-        .icon(MdPerson)
-        .schemaType("author")
-        .child(S.documentTypeList("author").title("Authors")),
+        .title("Coffee Bar")
+        .icon(MdLocalCafe)
+        .schemaType("coffee")
+        .child(S.documentTypeList("coffee").title("Coffee Bar")),
       S.listItem()
         .title("Categories")
         .icon(MdLocalOffer)
