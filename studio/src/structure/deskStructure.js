@@ -1,5 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { MdLocalCafe, MdSettings } from "react-icons/md";
+import { MdLocalCafe, MdRestaurantMenu, MdSettings } from "react-icons/md";
 import { MdPerson, MdDescription, MdLocalOffer } from "react-icons/md";
 import IframePreview from "../previews/IframePreview";
 
@@ -57,7 +57,12 @@ export default () =>
         .title("Coffee Bar")
         .icon(MdLocalCafe)
         .schemaType("coffee")
-        .child(S.documentTypeList("coffee").title("Coffee Bar")),
+        .child(S.documentTypeList("coffee").title("Coffee & Pastries")),
+      S.listItem()
+        .title("Food Menu")
+        .icon(MdRestaurantMenu)
+        .schemaType("food")
+        .child(S.documentTypeList("food").title("Menu Items")),
       S.listItem()
         .title("Categories")
         .icon(MdLocalOffer)
@@ -68,7 +73,7 @@ export default () =>
       // defined the structure above.
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !["category", "author", "post", "siteSettings"].includes(
+          !["category", "food", "coffee", "siteSettings"].includes(
             listItem.getId()
           )
       ),

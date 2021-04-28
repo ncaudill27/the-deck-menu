@@ -7,6 +7,7 @@ import schemaTypes from "all:part:@sanity/base/schema-type";
 // document schemas
 import category from "./documents/category";
 import coffee from "./documents/coffee";
+import food from './documents/food';
 import siteSettings from "./documents/siteSettings";
 
 // Object types
@@ -18,7 +19,7 @@ import mainImage from "./objects/mainImage";
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
-  name: "blog",
+  name: "menu",
   // Then proceed to concatenate our our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
@@ -26,6 +27,7 @@ export default createSchema({
     // in the studio.
     siteSettings,
     coffee,
+    food,
     category,
     mainImage,
     bodyPortableText,
