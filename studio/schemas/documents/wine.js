@@ -9,9 +9,14 @@ export default {
       title: "Name",
     },
     {
-      name: "price",
+      name: "price_glass",
       type: "number",
-      title: "Price",
+      title: "Price by the glass",
+    },
+    {
+      name: "price_bottle",
+      type: "number",
+      title: "Price by the bottle"
     },
     {
       name: "type",
@@ -31,18 +36,18 @@ export default {
       type: "mainImage",
       title: "Main image",
     },
-    {
-      name: "categories",
-      type: "array",
-      title: "Categories",
-      of: [
-        {
-          type: "reference",
-          to: {
-            type: "category",
-          },
-        },
-      ],
-    },
+    // {
+    //   name: "categories",
+    //   type: "array",
+    //   title: "Categories",
+    //   of: [
+    //     {
+    //       type: "reference",
+    //       to: {
+    //         type: "category",
+    //       },
+    //     },
+    //   ],
+    // },
   ],
 };

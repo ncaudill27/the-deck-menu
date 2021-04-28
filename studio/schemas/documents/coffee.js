@@ -11,13 +11,9 @@ export default {
     },
     {
       name: "price",
-      type: "number",
+      type: "string",
       title: "Price",
-    },
-    {
-      name: "mainImage",
-      type: "mainImage",
-      title: "Main image",
+      validation: Rule => Rule.regex(/\./).error('Be sure to add the full price. eg: 3.00')
     },
     {
       name: "categories",
@@ -31,6 +27,11 @@ export default {
           },
         },
       ],
+    },
+    {
+      name: "mainImage",
+      type: "mainImage",
+      title: "Main image",
     },
   ],
 };

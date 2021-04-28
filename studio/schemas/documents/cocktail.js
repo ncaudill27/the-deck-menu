@@ -41,23 +41,23 @@ export default {
       title: "Ingredients",
       of: [
         {
-          type: 'ingredient_cocktail'
+          type: 'string'
         }
       ]
     },
-    {
-      name: "categories",
-      type: "array",
-      title: "Categories",
-      of: [
-        {
-          type: "reference",
-          to: {
-            type: "category",
-          },
-        },
-      ],
-    },
+    // {
+    //   name: "categories",
+    //   type: "array",
+    //   title: "Categories",
+    //   of: [
+    //     {
+    //       type: "reference",
+    //       to: {
+    //         type: "category",
+    //       },
+    //     },
+    //   ],
+    // },
     // {
     //   name: "body",
     //   type: "bodyPortableText",

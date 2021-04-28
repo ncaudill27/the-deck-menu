@@ -14,9 +14,15 @@ export default {
       type: "string"
     },
     {
+      title: "Draft",
+      name: "draft",
+      type: "boolean"
+    },
+    {
       name: "price",
-      type: "number",
+      type: "string",
       title: "Price",
+      validation: Rule => Rule.regex(/\./).error('Be sure to add the full price. eg: 3.00')
     },
     {
       name: "mainImage",
