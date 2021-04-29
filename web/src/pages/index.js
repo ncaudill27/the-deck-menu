@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
+import styled from 'styled-components';
 import {
   mapEdgesToNodes,
 } from "../lib/helpers";
@@ -45,9 +46,13 @@ const IndexPage = (props) => {
         title={site.title}
         description={site.description}
       />
-        <h1>{site.title}</h1>
+        <Title>{site.title}</Title>
     </Layout>
   );
 };
+
+const Title = styled.h1`
+  font-size: 3rem;
+`
 
 export default IndexPage;

@@ -78,7 +78,7 @@ export default () =>
       // defined the structure above.
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !["food", "coffee", "wine", "beer", "cocktail", "siteSettings"].includes(
+          !["food", "coffee", "wine", "beer", "cocktail"].includes(
             listItem.getId()
           )
       ),
