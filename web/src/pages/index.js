@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import styled from 'styled-components';
 import {
   mapEdgesToNodes,
@@ -32,7 +32,7 @@ const IndexPage = (props) => {
     );
   }
 
-  const site = data?.site?.siteMetadata
+  const site = data.site?.siteMetadata
 
   if (!site) {
     throw new Error(
@@ -52,7 +52,9 @@ const IndexPage = (props) => {
 };
 
 const Title = styled.h1`
-  font-size: 3rem;
+  font-size: 4rem;
+  font-family: 'Freckle Face', sans-serif;
+
 `
 
 export default IndexPage;

@@ -25,5 +25,24 @@ module.exports = {
         overlayDrafts: !isProd,
       },
     },
+    {
+      resolve: `gatsby-plugin-webfonts`,
+      options: {
+        fonts: {
+          google: [
+            {
+              family: 'Freckle Face',
+            },
+            {
+              family: 'Original Surfer',
+            },
+            {
+              family: 'Work Sans',
+              variants: ['300', '400', '500', '600']
+            }
+          ],
+        },
+      },
+    },
   ],
 };
