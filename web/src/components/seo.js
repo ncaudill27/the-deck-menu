@@ -5,12 +5,12 @@ import { graphql, useStaticQuery } from "gatsby";
 import { imageUrlFor } from "../lib/image-url";
 import { buildImageObj } from "../lib/helpers";
 
-function SEO({ description, lang, meta, keywords, title, image }) {
+function SEO({ description, lang, meta, title, image }) {
   const { site } = useStaticQuery(detailsQuery) || {};
 
   const metaDescription = description || site.description || "";
   const siteTitle = site.title || "";
-  const siteAuthor = site.author?.name || "";
+  const siteAuthor = "Nelson Caudill";
   const metaImage = image?.asset
     ? imageUrlFor(buildImageObj(image)).width(1200).url()
     : "";
@@ -58,14 +58,6 @@ function SEO({ description, lang, meta, keywords, title, image }) {
           content: metaDescription,
         },
       ]
-        .concat(
-          keywords && keywords.length > 0
-            ? {
-                name: "keywords",
-                content: keywords.join(", "),
-              }
-            : []
-        )
         .concat(meta)}
     />
   );
@@ -74,14 +66,12 @@ function SEO({ description, lang, meta, keywords, title, image }) {
 SEO.defaultProps = {
   lang: "en",
   meta: [],
-  keywords: [],
 };
 
 SEO.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.array,
-  keywords: PropTypes.arrayOf(PropTypes.string),
   title: PropTypes.string.isRequired,
 };
 
@@ -92,10 +82,6 @@ const detailsQuery = graphql`
     site: sanitySiteSettings(_id: { eq: "siteSettings" }) {
       title
       description
-      keywords
-      author {
-        name
-      }
     }
   }
 `;
