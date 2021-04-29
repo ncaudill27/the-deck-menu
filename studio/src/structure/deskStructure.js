@@ -78,17 +78,17 @@ export default () =>
         .icon(MdLocalBar)
         .schemaType("cocktail")
         .child(S.documentTypeList("cocktail").title("Cocktail List")),
-      S.listItem()
-        .title("Categories")
-        .icon(MdLocalOffer)
-        .schemaType("category")
-        .child(S.documentTypeList("category").title("Categories")),
+      // S.listItem()
+      //   .title("Categories")
+      //   .icon(MdLocalOffer)
+      //   .schemaType("category")
+      //   .child(S.documentTypeList("category").title("Categories")),
       // `S.documentTypeListItems()` returns an array of all the document types
       // defined in schema.js. We filter out those that we have
       // defined the structure above.
       ...S.documentTypeListItems().filter(
         (listItem) =>
-          !["category", "food", "coffee", "wine", "beer", "cocktail", "siteSettings"].includes(
+          !["food", "coffee", "wine", "beer", "cocktail", "siteSettings"].includes(
             listItem.getId()
           )
       ),

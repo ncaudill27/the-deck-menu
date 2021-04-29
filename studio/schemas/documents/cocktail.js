@@ -8,16 +8,26 @@ export default {
       type: "string",
       title: "Name",
     },
-    // {
-    //   name: 'garnish',
-    //   type: 'string',
-    //   title: 'Garnish'
-    // },
     {
       name: 'price',
       type: 'number',
       title: 'Price'
     },
+    {
+      name: "ingredients",
+      type: "array",
+      title: "Ingredients",
+      of: [
+        {
+          type: 'string'
+        }
+      ]
+    },
+    // {
+    //   name: 'garnish',
+    //   type: 'string',
+    //   title: 'Garnish'
+    // },
     // {
     //   name: 'glassware',
     //   type: 'string',
@@ -35,16 +45,6 @@ export default {
     //     ]
     //   }
     // },
-    {
-      name: "ingredients",
-      type: "array",
-      title: "Ingredients",
-      of: [
-        {
-          type: 'string'
-        }
-      ]
-    },
     // {
     //   name: "categories",
     //   type: "array",

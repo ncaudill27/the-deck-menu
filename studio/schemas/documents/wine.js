@@ -30,12 +30,7 @@ export default {
         ],
         layout: 'radio'
       }
-    },
-    {
-      name: "mainImage",
-      type: "mainImage",
-      title: "Main image",
-    },
+    }
     // {
     //   name: "categories",
     //   type: "array",

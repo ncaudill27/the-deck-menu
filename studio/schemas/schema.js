@@ -5,7 +5,7 @@ import createSchema from "part:@sanity/base/schema-creator";
 import schemaTypes from "all:part:@sanity/base/schema-type";
 
 // document schemas
-import category from "./documents/category";
+// import category from "./documents/category";
 import coffee from "./documents/coffee";
 import food from './documents/food';
 import wine from './documents/wine';
@@ -35,7 +35,7 @@ export default createSchema({
     wine,
     beer,
     cocktail,
-    category,
+    // category,
     mainImage,
     ingredientCocktail,
     bodyPortableText,
