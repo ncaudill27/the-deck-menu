@@ -1,18 +1,17 @@
 import React from "react";
 
-import "../styles/layout.css";
-import * as styles from "./layout.module.css";
+import GlobalStyles from '../styles/globalStyles'
+
 
 const Layout = ({ children }) => (
   <>
-    <div className={styles.content}>{children}</div>
-    <footer className={styles.footer}>
-      <div className={styles.footerWrapper}>
-        <div className={styles.siteInfo}>
-          &copy; {new Date().getFullYear()}, Built with{" "}
-          <a href="https://www.sanity.io">Sanity</a> &amp;{" "}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </div>
+    <GlobalStyles />
+    <main>{children}</main>
+    <footer>
+      <div>
+        &copy; {new Date().getFullYear()}, Built with{" "}
+        <a href="https://www.sanity.io">Sanity</a> &amp;{" "}
+        <a href="https://www.gatsbyjs.org">Gatsby</a>
       </div>
     </footer>
   </>
