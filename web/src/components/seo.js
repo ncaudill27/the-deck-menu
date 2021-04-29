@@ -79,9 +79,11 @@ export default SEO;
 
 const detailsQuery = graphql`
   query DefaultSEOQuery {
-    site: sanitySiteSettings(_id: { eq: "siteSettings" }) {
-      title
-      description
+    site {
+      siteMetadata {
+        title
+        description
+      }
     }
   }
 `;
