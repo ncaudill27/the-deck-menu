@@ -3,22 +3,25 @@ import { graphql } from "gatsby";
 import {
   mapEdgesToNodes,
 } from "../lib/helpers";
-import Container from "../components/container";
 import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
-import Layout from "../containers/layout";
+import Layout from "../components/layout";
 
 export const query = graphql`
-  query IndexPageQuery {
-    site: sanitySiteSettings(_id: { regex: "/(drafts.|)siteSettings/" }) {
-      title
-      description
+  query {
+    site {
+      siteMetadata {
+        title
+        description
+      }
     }
   }
 `;
 
 const IndexPage = (props) => {
   const { data, errors } = props;
+
+  console.log(data);
 
   if (errors) {
     return (
@@ -28,7 +31,7 @@ const IndexPage = (props) => {
     );
   }
 
-  const site = (data || {}).site;
+  const site = data?.site?.siteMetadata
 
   if (!site) {
     throw new Error(
@@ -41,11 +44,8 @@ const IndexPage = (props) => {
       <SEO
         title={site.title}
         description={site.description}
-        keywords={site.keywords}
       />
-      <Container>
-        <h1 hidden>Welcome to {site.title}</h1>
-      </Container>
+        <h1>{site.title}</h1>
     </Layout>
   );
 };

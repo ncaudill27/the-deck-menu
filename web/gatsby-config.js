@@ -8,6 +8,10 @@ const clientConfig = require("./client-config");
 const isProd = process.env.NODE_ENV === "production";
 
 module.exports = {
+  siteMetadata: {
+    title: `The Deck Menu`,
+    description: `Content Management System built to handle menu changes.`,
+  },
   plugins: [
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
