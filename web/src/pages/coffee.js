@@ -2,6 +2,8 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes } from "../lib/helpers";
 
+import Section from '../components/coffeeSection'
+
 const CoffeePage = ({data}) => {
   
   const brewedNodes = !!data?.brewed
@@ -17,8 +19,17 @@ const CoffeePage = ({data}) => {
     ? mapEdgesToNodes(data.pastry)
     : [];
 
-
+  return (
+    <div>
+      <Section title='Brewed Coffee' list={brewedNodes} />
+      <Section title='Espresso Drink' list={espressoNodes} />
+      <Section title='Other Beverages' list={otherNodes} />
+      <Section title='Pastries' list={pastryNodes} />
+    </div>
+  )
 }
+
+
 
 export const query = graphql`
   query {
@@ -60,3 +71,5 @@ export const query = graphql`
     }
   }
 `
+
+export default CoffeePage

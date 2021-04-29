@@ -44,6 +44,7 @@ const IndexPage = (props) => {
         description={site.description}
       />
         <Title>{site.title}</Title>
+        <Link to='/coffee'>Coffee</Link>
     </Layout>
   );
 };
