@@ -1,6 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
-import { MdFilter, MdLocalBar, MdLocalCafe, MdLocalDrink, MdOpacity, MdRestaurantMenu, MdSettings } from "react-icons/md";
-import { MdPerson, MdDescription, MdLocalOffer } from "react-icons/md";
+import { MdLocalBar, MdLocalCafe, MdLocalDrink, MdOpacity, MdRestaurantMenu } from "react-icons/md";
 import IframePreview from "../previews/IframePreview";
 
 // Web preview configuration
@@ -43,15 +42,6 @@ export default () =>
   S.list()
     .title("Content")
     .items([
-      S.listItem()
-        .title("Settings")
-        .icon(MdSettings)
-        .child(
-          S.editor()
-            .id("siteSettings")
-            .schemaType("siteSettings")
-            .documentId("siteSettings")
-        ),
       S.divider(),
       S.listItem()
         .title("Coffee Bar")

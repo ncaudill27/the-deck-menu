@@ -11,7 +11,6 @@ import food from './documents/food';
 import wine from './documents/wine';
 import beer from './documents/beer';
 import cocktail from './documents/cocktail';
-import siteSettings from "./documents/siteSettings";
 
 // Object types
 import bodyPortableText from "./objects/bodyPortableText";
@@ -29,7 +28,6 @@ export default createSchema({
   types: schemaTypes.concat([
     // The following are document types which will appear
     // in the studio.
-    siteSettings,
     coffee,
     food,
     wine,
