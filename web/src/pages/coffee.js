@@ -1,4 +1,5 @@
 import React from 'react'
+import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes } from "../lib/helpers";
 
@@ -21,6 +22,7 @@ const CoffeePage = ({data}) => {
 
   return (
     <div>
+      <Title>Coffee Bar</Title>
       <Section title='Brewed Coffee' list={brewedNodes} />
       <Section title='Espresso Drink' list={espressoNodes} />
       <Section title='Other Beverages' list={otherNodes} />
@@ -28,6 +30,11 @@ const CoffeePage = ({data}) => {
     </div>
   )
 }
+
+const Title = styled.h1`
+  font-family: 'Original Surfer', sans-serif;
+  font-size: 1.9rem;
+`
 
 
 

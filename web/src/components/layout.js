@@ -20,7 +20,6 @@ const Layout = ({ children }) => (
 
 const Main = styled.main`
   height: 95vh;
-  padding-top: 50px;
 `
 
 const Footer = styled.footer`

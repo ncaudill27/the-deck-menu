@@ -43,16 +43,43 @@ const IndexPage = (props) => {
         title={site.title}
         description={site.description}
       />
-        <Title>{site.title}</Title>
-        <Link to='/coffee'>Coffee</Link>
+        <Wrapper>
+          <Title>{site.title}</Title>
+          <StyledLink to='/coffee'>Coffee</StyledLink>
+        </Wrapper>
     </Layout>
   );
 };
+
+const Wrapper = styled.div`
+  height: 100%;
+  padding: 40px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+`
 
 const Title = styled.h1`
   font-size: 4rem;
   font-family: 'Freckle Face', sans-serif;
 
+`
+
+const StyledLink = styled(Link)`
+  margin-top: 40px;
+  background-color: hsl(37, 35%, 70%);
+  border: 5px solid hsl(37, 45%, 31%);
+  padding: 12px 28px;
+  text-decoration: none;
+  font-size: 4rem;
+  border-radius: 5px;
+  color: black;
+  width: 100%;
+
+  &:hover {
+    background-color: hsl(37, 45%, 31%);
+    color: white;
+  }
 `
 
 export default IndexPage;

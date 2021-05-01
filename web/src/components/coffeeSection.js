@@ -15,7 +15,7 @@ const CoffeeSection = ({title, list}) => (
 )
 
 const Title = styled.h2`
-  font-size: 2.2rem;
+  font-size: 1.4rem;
   font-family: 'Original Surfer', sans-serif;
   margin: 0;
 `
@@ -24,7 +24,7 @@ const ItemWrapper = styled.article`
   display: flex;
   justify-content: space-between;
   font-family: 'Work Sans', sans-serif;
-  font-size: 1.2rem;
+  font-size: 1rem;
   line-height: 1.3;
 
   &:last-child {
