@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import { mapEdgesToNodes } from "../lib/helpers";
 
 import Layout from '../components/layout'
+import LetterheadWrapper from '../components/letterheadWrapper'
 import Header from '../components/sectionHeader'
 import Section from '../components/coffeeSection'
 
@@ -23,11 +24,13 @@ const CoffeePage = ({data}) => {
 
   return (
     <Layout>
-      <Header>Coffee Bar</Header>
-      <Section title='Brewed Coffee' list={brewedNodes} />
-      <Section title='Espresso Drink' list={espressoNodes} />
-      <Section title='Other Beverages' list={otherNodes} />
-      <Section title='Pastries' list={pastryNodes} />
+      <LetterheadWrapper padding={16}>
+        <Header>Coffee Bar</Header>
+        <Section title='Brewed Coffee' list={brewedNodes} />
+        <Section title='Espresso Drink' list={espressoNodes} />
+        <Section title='Other Beverages' list={otherNodes} />
+        <Section title='Pastries' list={pastryNodes} />
+      </LetterheadWrapper>
     </Layout>
   )
 }
