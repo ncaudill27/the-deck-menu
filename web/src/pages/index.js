@@ -46,6 +46,7 @@ const IndexPage = (props) => {
         <Wrapper>
           <Title>{site.title}</Title>
           <StyledLink to='/coffee'>Coffee</StyledLink>
+          <StyledLink to='/drinks'>Drinks</StyledLink>
         </Wrapper>
     </Layout>
   );
