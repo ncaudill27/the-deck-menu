@@ -4,8 +4,8 @@ import { mapEdgesToNodes } from "../lib/helpers";
 
 import Layout from '../components/layout'
 import LetterheadWrapper from '../components/letterheadWrapper'
-import Header from '../components/sectionHeader'
-import Section from '../components/coffeeSection'
+import CoffeeWrapper from '../components/coffeeSection'
+import CoffeeList from '../components/coffeeList';
 
 const CoffeePage = ({data}) => {
   
@@ -22,14 +22,12 @@ const CoffeePage = ({data}) => {
     ? mapEdgesToNodes(data.pastry)
     : [];
 
+    console.log(data);
   return (
     <Layout>
       <LetterheadWrapper id='coffee' padding={16}>
-        <Header>Coffee Bar</Header>
-        <Section title='Brewed Coffee' list={brewedNodes} />
-        <Section title='Espresso Drink' list={espressoNodes} />
-        <Section title='Other Beverages' list={otherNodes} />
-        <Section title='Pastries' list={pastryNodes} />
+        <CoffeeList brewed={brewedNodes} espresso={espressoNodes} other={otherNodes} pastry={pastryNodes} />
+        <CoffeeList brewed={brewedNodes} espresso={espressoNodes} other={otherNodes} pastry={pastryNodes} />
       </LetterheadWrapper>
     </Layout>
   )

@@ -22,6 +22,8 @@ const Wrapper = styled.div`
   padding: var(--padding);
 
   ${CoffeePage} & {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     background: linear-gradient(
       180deg,
       hsla(333, 81%, 57%, 0.22) 0%,
