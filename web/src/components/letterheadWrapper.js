@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
+import CoffeePage from '../pages/coffee'
+
 const LetterheadWrapper = ({children, padding}) => (
   <Wrapper style={{'--padding': padding + 'px'}}>
     {children}
@@ -17,8 +19,15 @@ const Wrapper = styled.div`
   bottom: 0;
   left: 0;
   margin: auto;
-  background: linear-gradient(180deg, rgba(234, 57, 138, 0.22) 0%, #B2F9E2 100%);
   padding: var(--padding);
+
+  ${CoffeePage} & {
+    background: linear-gradient(
+      180deg,
+      hsla(333, 81%, 57%, 0.22) 0%,
+      hsla(161, 86%, 84%, 1) 100%
+    );
+  }
 `
 
 LetterheadWrapper.propTypes = {

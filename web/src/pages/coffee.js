@@ -24,7 +24,7 @@ const CoffeePage = ({data}) => {
 
   return (
     <Layout>
-      <LetterheadWrapper padding={16}>
+      <LetterheadWrapper id='coffee' padding={16}>
         <Header>Coffee Bar</Header>
         <Section title='Brewed Coffee' list={brewedNodes} />
         <Section title='Espresso Drink' list={espressoNodes} />
