@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { mapEdgesToNodes } from '../lib/helpers'
 
 import DraftSection from '../components/draftSection'
+import BeerSection from '../components/beerSection'
 
 const DrinksPage = ({data}) => {
 
@@ -20,13 +21,10 @@ const DrinksPage = ({data}) => {
     ? mapEdgesToNodes(data.cocktail)
     : [];
 
-
-  console.log(draftNodes);
-
   return (
     <div>
-      <h1>hello</h1>
       <DraftSection drafts={draftNodes} />
+      <BeerSection beers={beerNodes} />
     </div>
   )
 }
