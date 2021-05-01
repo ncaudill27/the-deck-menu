@@ -7,7 +7,7 @@ import Name from '../components/itemName'
 import Price from '../components/itemPrice'
 
 const CoffeeSection = ({title, list}) => (
-  <>
+  <section>
     <Subheader>{title}</Subheader>
     {list.map(({id, name, price}) => (
       <Spread key={id}>
@@ -15,7 +15,7 @@ const CoffeeSection = ({title, list}) => (
         <Price>{price}</Price>
       </Spread>
     ))}
-  </>
+  </section>
 )
 
 CoffeeSection.propTypes = {

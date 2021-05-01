@@ -9,7 +9,7 @@ const CoffeeWrapper = ({children}) => (
 
 const Wrapper = styled.div`
   width: calc(100% - 32px);
-  padding: 16px;
+  padding: 0 40px;
   background-color: white;
   justify-self: center;
 `
