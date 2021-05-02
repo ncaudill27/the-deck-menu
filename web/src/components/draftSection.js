@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const DraftSection = ({drafts}) => (
+const DraftSection = ({list}) => (
   <Wrapper>
-    {drafts.map(({id, name, brewery}) => (
+    {list.map(({id, name, brewery}) => (
       <Draft key={id}>
         <Name>{name}</Name>
         <Brewery>{brewery}</Brewery>
@@ -25,11 +25,10 @@ const Name = styled.h6`
   margin: 0;
 `
 
-const Brewery = styled.caption`
-  display: block;
-  text-align: left;
+const Brewery = styled.p`
+  margin: 0;
   font-size: 0.9rem;
-  color: hsl(0, 0%, 40%)
+  color: hsl(0, 0%, 40%);
 `
 
 export default DraftSection

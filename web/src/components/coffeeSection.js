@@ -6,10 +6,10 @@ const CoffeeSection = ({title, list}) => (
   <section>
     <Title>{title}</Title>
     {list.map(({name, price}) => (
-      <ItemWrapper>
+      <Coffee>
         <Name>{name}</Name>
         <Price>{price}</Price>
-      </ItemWrapper>
+      </Coffee>
     ))}
   </section>
 )
@@ -20,7 +20,7 @@ const Title = styled.h2`
   margin: 0;
 `
 
-const ItemWrapper = styled.article`
+const Coffee = styled.article`
   display: flex;
   justify-content: space-between;
   font-family: 'Work Sans', sans-serif;

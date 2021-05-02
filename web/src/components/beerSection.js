@@ -1,9 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const BeerSection = ({beers}) => (
+const BeerSection = ({list}) => (
   <Wrapper>
-    {beers.map(({id, name, brewery, price}) => (
+    {list.map(({id, name, brewery, price}) => (
       <Beer key={id}>
         <NamePriceWrapper>
           <Name>{name}</Name>

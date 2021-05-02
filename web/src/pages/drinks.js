@@ -5,6 +5,7 @@ import { mapEdgesToNodes } from '../lib/helpers'
 
 import DraftSection from '../components/draftSection'
 import BeerSection from '../components/beerSection'
+import WineSection from '../components/wineSection'
 
 const DrinksPage = ({data}) => {
 
@@ -14,17 +15,25 @@ const DrinksPage = ({data}) => {
   const beerNodes = !!data?.beer
     ? mapEdgesToNodes(data.beer)
     : [];
-  const wineNodes = !!data?.wine
-    ? mapEdgesToNodes(data.wine)
+  const redNodes = !!data?.red
+    ? mapEdgesToNodes(data.red)
+    : [];
+  const whiteNodes = !!data?.white
+    ? mapEdgesToNodes(data.white)
+    : [];
+  const sparklingNodes = !!data?.sparkling
+    ? mapEdgesToNodes(data.sparkling)
     : [];
   const cocktailsNodes = !!data?.cocktail
     ? mapEdgesToNodes(data.cocktail)
     : [];
 
+    console.log(whiteNodes);
   return (
     <div>
-      <DraftSection drafts={draftNodes} />
-      <BeerSection beers={beerNodes} />
+      <DraftSection list={draftNodes} />
+      <BeerSection list={beerNodes} />
+      <WineSection red={redNodes} white={whiteNodes} sparkling={sparklingNodes} />
     </div>
   )
 }
@@ -50,7 +59,29 @@ export const query = graphql`
         }
       }
     }
-    wine: allSanityWine {
+    red: allSanityWine(filter: {type: {eq: "red"}}) {
+      edges {
+        node {
+          price_glass
+          price_bottle
+          type
+          name
+          id
+        }
+      }
+    }
+    white: allSanityWine(filter: {type: {eq: "wine"}}) {
+      edges {
+        node {
+          price_glass
+          price_bottle
+          type
+          name
+          id
+        }
+      }
+    }
+    sparkling: allSanityWine(filter: {type: {eq: "sparkling"}}) {
       edges {
         node {
           price_glass

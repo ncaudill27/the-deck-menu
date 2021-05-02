@@ -72,7 +72,8 @@ const StyledLink = styled(Link)`
   border: 5px solid hsl(37, 45%, 31%);
   padding: 12px 28px;
   text-decoration: none;
-  font-size: 4rem;
+  font-family: 'Original Surfer', sans-serif;
+  font-size: 3rem;
   border-radius: 5px;
   color: black;
   width: 100%;
