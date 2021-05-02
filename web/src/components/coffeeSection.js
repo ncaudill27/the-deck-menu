@@ -4,14 +4,15 @@ import PropTypes from 'prop-types'
 
 import Spread from '../components/spread'
 import Name from '../components/itemName'
+import Price from '../components/itemPrice'
 
 const CoffeeSection = ({title, list}) => (
   <Wrapper>
     <Title>{title}</Title>
-    {list.map(({name, price}) => (
-      <Spread>
+    {list.map(({id, name, price}) => (
+      <Spread key={id}>
         <Name name={name} />
-        <Price>{price}</Price>
+        <Price price={price} />
       </Spread>
     ))}
   </Wrapper>
@@ -24,10 +25,6 @@ const Title = styled.h2`
   font-size: 1.4rem;
   font-family: 'Original Surfer', sans-serif;
   margin: 0;
-`
-
-const Price = styled.p`
-  margin: 0;  
 `
 
 CoffeeSection.propTypes = {

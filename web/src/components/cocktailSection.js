@@ -3,6 +3,7 @@ import React from 'react'
 import Spread from '../components/spread'
 import Header from '../components/sectionHeader'
 import Name from '../components/itemName'
+import Price from '../components/itemPrice'
 import Context from '../components/itemContext'
 
 const CocktailSection = ({list}) => (
@@ -12,7 +13,7 @@ const CocktailSection = ({list}) => (
       <Cocktail key={id}>
         <Spread>
           <Name name={name} />
-          <Price>{price}</Price>
+          <Price price={price} />
         </Spread>
         <Context>
           {ingredients.map(ingredient =>(

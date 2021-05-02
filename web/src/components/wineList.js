@@ -3,6 +3,7 @@ import styled from 'styled-components'
 
 import Spread from '../components/spread'
 import Name from '../components/itemName'
+import Price from '../components/itemPrice'
 
 const WineList = ({list}) => (
   <>
@@ -14,15 +15,10 @@ const WineList = ({list}) => (
     }) => (
       <Spread as='article' key={id}>
         <Name name={name} />
-        <Price>{price_glass}/{price_bottle}</Price>
+        <Price price={`${price_glass}/${price_bottle}`} />
       </Spread>
     ))}
   </>
 )
-
-const Price = styled.p`
-  margin: 0;
-  font-size: 1rem;
-`
 
 export default WineList

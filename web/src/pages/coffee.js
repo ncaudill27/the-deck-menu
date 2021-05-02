@@ -43,6 +43,7 @@ export const query = graphql`
     brewed: allSanityCoffee(filter: {type: {eq: "brewed"}}) {
       edges {
         node {
+          id
           name
           price
           type
@@ -52,6 +53,7 @@ export const query = graphql`
     espresso: allSanityCoffee(filter: {type: {eq: "espresso"}}) {
       edges {
         node {
+          id
           name
           price
           type
@@ -61,6 +63,7 @@ export const query = graphql`
     other: allSanityCoffee(filter: {type: {eq: "other"}}) {
       edges {
         node {
+          id
           name
           price
           type
@@ -70,6 +73,7 @@ export const query = graphql`
     pastry: allSanityCoffee(filter: {type: {eq: "pastry"}}) {
       edges {
         node {
+          id
           name
           price
           type

@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import Spread from '../components/spread'
 import Name from '../components/itemName'
 import Context from '../components/itemContext'
+import Price from '../components/itemPrice'
 
 const BeerSection = ({list}) => (
   <Wrapper>
@@ -11,7 +12,7 @@ const BeerSection = ({list}) => (
       <Beer key={id}>
         <Spread>
           <Name name={name} />
-          <Price>{price.split('.')[0]}</Price>
+          <Price price={price.split('.')[0]} />
         </Spread>
         <Context context={brewery} />
       </Beer>
@@ -25,10 +26,6 @@ const Wrapper = styled.div`
 
 const Beer = styled.article`
   
-`
-
-const Price = styled.p`
-  margin: 0;
 `
 
 export default BeerSection
