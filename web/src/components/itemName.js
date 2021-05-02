@@ -7,7 +7,7 @@ const ItemName = ({name}) => (
 )
 
 const Name = styled.h6`
-  font-size: 1rem;
+  font-size: inherit;
   margin: 0;
 `
 ItemName.propTypes = {

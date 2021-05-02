@@ -23,10 +23,4 @@ const Draft = styled.article`
   
 `
 
-const Brewery = styled.p`
-  margin: 0;
-  font-size: 0.9rem;
-  color: hsl(0, 0%, 40%);
-`
-
 export default DraftSection

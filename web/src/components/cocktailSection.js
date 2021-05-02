@@ -1,44 +1,32 @@
 import React from 'react'
 
+import Spread from '../components/spread'
 import Header from '../components/sectionHeader'
 import Name from '../components/itemName'
+import Context from '../components/itemContext'
 
 const CocktailSection = ({list}) => (
   <Wrapper>
     <Header>Cocktails</Header>
     {list.map(({id, ingredients, name, price}) => (
       <Cocktail key={id}>
-        <NamePriceWrapper>
+        <Spread>
           <Name name={name} />
           <Price>{price}</Price>
-        </NamePriceWrapper>
-        <IngredientsWrapper>
+        </Spread>
+        <Context>
           {ingredients.map(ingredient =>(
             <Ingredient>{ingredient}</Ingredient>
           ))}
-        </IngredientsWrapper>
+        </Context>
       </Cocktail>
     ))}
   </Wrapper>
 )
 
 const Wrapper = styled.div`
-
-`
-
-const Cocktail = styled.article`
   font-family: 'Work Sans', sans-serif;
-`
-
-const NamePriceWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
   font-size: 1rem;
-`
-
-const IngredientsWrapper = styled.div`
-  font-size: 0.9rem;
-  color: hsl(0, 0%, 40%);
 `
 
 const Ingredient = styled.p`

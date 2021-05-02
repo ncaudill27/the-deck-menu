@@ -2,36 +2,28 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
+import Spread from '../components/spread'
 import Name from '../components/itemName'
 
 const CoffeeSection = ({title, list}) => (
-  <section>
+  <Wrapper>
     <Title>{title}</Title>
     {list.map(({name, price}) => (
-      <Coffee>
+      <Spread>
         <Name name={name} />
         <Price>{price}</Price>
-      </Coffee>
+      </Spread>
     ))}
-  </section>
+  </Wrapper>
 )
 
+const Wrapper = styled.section`
+  font-family: 'Work Sans', sans-serif;
+`
 const Title = styled.h2`
   font-size: 1.4rem;
   font-family: 'Original Surfer', sans-serif;
   margin: 0;
-`
-
-const Coffee = styled.article`
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1rem;
-  line-height: 1.3;
-
-  &:last-child {
-    margin-bottom: 24px;
-  }
 `
 
 const Price = styled.p`

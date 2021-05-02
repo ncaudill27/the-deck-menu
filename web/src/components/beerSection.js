@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Spread from '../components/spread'
 import Name from '../components/itemName'
 import Context from '../components/itemContext'
 
@@ -8,10 +9,10 @@ const BeerSection = ({list}) => (
   <Wrapper>
     {list.map(({id, name, brewery, price}) => (
       <Beer key={id}>
-        <NamePriceWrapper>
+        <Spread>
           <Name name={name} />
           <Price>{price.split('.')[0]}</Price>
-        </NamePriceWrapper>
+        </Spread>
         <Context context={brewery} />
       </Beer>
     ))}
@@ -24,11 +25,6 @@ const Wrapper = styled.div`
 
 const Beer = styled.article`
   
-`
-
-const NamePriceWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
 `
 
 const Price = styled.p`

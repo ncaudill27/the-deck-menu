@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Spread from '../components/spread'
 import Name from '../components/itemName'
 
 const WineList = ({list}) => (
@@ -11,19 +12,13 @@ const WineList = ({list}) => (
       price_bottle,
       price_glass,
     }) => (
-      <Wine key={id}>
+      <Spread as='article' key={id}>
         <Name name={name} />
         <Price>{price_glass}/{price_bottle}</Price>
-      </Wine>
+      </Spread>
     ))}
   </>
 )
-
-const Wine = styled.article`
-  display: flex;
-  justify-content: space-between;
-  font-family: 'Work Sans', sans-serif;
-`
 
 const Price = styled.p`
   margin: 0;
