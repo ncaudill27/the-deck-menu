@@ -2,12 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
+import Name from '../components/itemName'
+
 const CoffeeSection = ({title, list}) => (
   <section>
     <Title>{title}</Title>
     {list.map(({name, price}) => (
       <Coffee>
-        <Name>{name}</Name>
+        <Name name={name} />
         <Price>{price}</Price>
       </Coffee>
     ))}
@@ -30,10 +32,6 @@ const Coffee = styled.article`
   &:last-child {
     margin-bottom: 24px;
   }
-`
-
-const Name = styled.p`
-  margin: 0;
 `
 
 const Price = styled.p`

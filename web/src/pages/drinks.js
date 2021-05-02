@@ -28,7 +28,7 @@ const DrinksPage = ({data}) => {
     ? mapEdgesToNodes(data.cocktail)
     : [];
 
-    console.log(whiteNodes);
+    console.log(cocktailsNodes);
   return (
     <div>
       <DraftSection list={draftNodes} />

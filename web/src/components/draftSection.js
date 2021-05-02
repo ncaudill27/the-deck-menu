@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Name from '../components/itemName'
+import Context from '../components/itemContext'
+
 const DraftSection = ({list}) => (
   <Wrapper>
     {list.map(({id, name, brewery}) => (
       <Draft key={id}>
-        <Name>{name}</Name>
-        <Brewery>{brewery}</Brewery>
+        <Name name={name} />
+        <Context context={brewery} />
       </Draft>
     ))}
   </Wrapper>
@@ -18,11 +21,6 @@ const Wrapper = styled.div`
 
 const Draft = styled.article`
   
-`
-
-const Name = styled.h6`
-  font-size: 1rem;
-  margin: 0;
 `
 
 const Brewery = styled.p`
