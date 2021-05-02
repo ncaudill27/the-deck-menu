@@ -1,7 +1,8 @@
 import React from 'react'
 
-import Spread from '../components/spread'
+import Wrapper from '../components/sectionWrapper'
 import Header from '../components/sectionHeader'
+import Spread from '../components/spread'
 import Name from '../components/itemName'
 import Price from '../components/itemPrice'
 import Context from '../components/itemContext'
@@ -25,11 +26,8 @@ const CocktailSection = ({list}) => (
   </Wrapper>
 )
 
-const Wrapper = styled.div`
-  font-family: 'Work Sans', sans-serif;
-  font-size: 1rem;
-`
-
 const Ingredient = styled.p`
   
 `
+
+export default CocktailSection

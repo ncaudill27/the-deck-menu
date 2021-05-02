@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Wrapper from '../components/sectionWrapper'
 import WineList from '../components/wineList'
 
 const WineSection = ({red, white, sparkling}) => (
@@ -20,13 +21,9 @@ const WineSection = ({red, white, sparkling}) => (
   </Wrapper>
 )
 
-const Wrapper = styled.div`
-  font-family: 'Work Sans', sans-serif;
-`
-
 const Header = styled.h3`
   font-family: 'Original Surfer', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin: 0;
   margin-bottom: 8px;
 

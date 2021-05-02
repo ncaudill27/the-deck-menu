@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import Wrapper from '../components/sectionWrapper'
 import Name from '../components/itemName'
 import Context from '../components/itemContext'
 
@@ -14,10 +15,6 @@ const DraftSection = ({list}) => (
     ))}
   </Wrapper>
 )
-
-const Wrapper = styled.div`
-  font-family: 'Work Sans', sans-serif;
-`
 
 const Draft = styled.article`
   

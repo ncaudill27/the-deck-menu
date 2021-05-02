@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
+import Wrapper from '../components/sectionWrapper'
 import Spread from '../components/spread'
 import Name from '../components/itemName'
 import Price from '../components/itemPrice'
@@ -18,9 +19,6 @@ const CoffeeSection = ({title, list}) => (
   </Wrapper>
 )
 
-const Wrapper = styled.section`
-  font-family: 'Work Sans', sans-serif;
-`
 const Title = styled.h2`
   font-size: 1.4rem;
   font-family: 'Original Surfer', sans-serif;
