@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-const ItemContext = ({context}) => (
-  <Context>{context}</Context>
+const ItemContext = ({children}) => (
+  <Context>{children}</Context>
 )
 
 const Context = styled.p`

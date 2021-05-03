@@ -13,8 +13,8 @@ const WineList = ({list}) => (
       price_glass,
     }) => (
       <Spread as='article' key={id}>
-        <Name name={name} />
-        <Price price={`${price_glass}/${price_bottle}`} />
+        <Name>{name}</Name>
+        <Price>{`${price_glass}/${price_bottle}`}</Price>
       </Spread>
     ))}
   </>

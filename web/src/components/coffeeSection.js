@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import Wrapper from '../components/sectionWrapper'
 import Subheader from '../components/subheader'
 import Spread from '../components/spread'
 import Name from '../components/itemName'
@@ -12,8 +11,8 @@ const CoffeeSection = ({title, list}) => (
     <Subheader>{title}</Subheader>
     {list.map(({id, name, price}) => (
       <Spread key={id}>
-        <Name name={name} />
-        <Price price={price} />
+        <Name>{name}</Name>
+        <Price>{price}</Price>
       </Spread>
     ))}
   </>

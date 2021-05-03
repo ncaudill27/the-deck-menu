@@ -5,6 +5,7 @@ import { mapEdgesToNodes } from '../lib/helpers'
 import DraftSection from '../components/draftSection'
 import BeerSection from '../components/beerSection'
 import WineSection from '../components/wineSection'
+import CocktailSection from '../components/cocktailSection'
 
 const DrinksPage = ({data}) => {
 
@@ -33,6 +34,7 @@ const DrinksPage = ({data}) => {
       <DraftSection list={draftNodes} />
       <BeerSection list={beerNodes} />
       <WineSection red={redNodes} white={whiteNodes} sparkling={sparklingNodes} />
+      <CocktailSection list={cocktailsNodes} />
     </div>
   )
 }

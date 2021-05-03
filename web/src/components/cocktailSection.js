@@ -1,4 +1,6 @@
 import React from 'react'
+import styled from 'styled-components'
+import PropTypes from 'prop-types'
 
 import Wrapper from '../components/sectionWrapper'
 import Header from '../components/sectionHeader'
@@ -13,21 +15,27 @@ const CocktailSection = ({list}) => (
     {list.map(({id, ingredients, name, price}) => (
       <Cocktail key={id}>
         <Spread>
-          <Name name={name} />
-          <Price price={price} />
+          <Name>{name}</Name>
+          <Price>{price}</Price>
         </Spread>
         <Context>
-          {ingredients.map(ingredient =>(
-            <Ingredient>{ingredient}</Ingredient>
-          ))}
+          {ingredients.join(', ')}
         </Context>
       </Cocktail>
     ))}
   </Wrapper>
 )
 
-const Ingredient = styled.p`
+const Cocktail = styled.article`
   
 `
+
+const Ingredient = styled.p`
+  margin: 0;
+`
+
+CocktailSection.propTypes = {
+  list: PropTypes.array.isRequired
+}
 
 export default CocktailSection

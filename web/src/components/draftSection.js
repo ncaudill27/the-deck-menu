@@ -9,8 +9,10 @@ const DraftSection = ({list}) => (
   <Wrapper>
     {list.map(({id, name, brewery}) => (
       <Draft key={id}>
-        <Name name={name} />
-        <Context context={brewery} />
+        <Name>{name}</Name>
+        <Context>
+          {brewery}
+        </Context>
       </Draft>
     ))}
   </Wrapper>

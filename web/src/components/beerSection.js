@@ -12,10 +12,12 @@ const BeerSection = ({list}) => (
     {list.map(({id, name, brewery, price}) => (
       <Beer key={id}>
         <Spread>
-          <Name name={name} />
-          <Price price={price.split('.')[0]} />
+          <Name>{name}</Name>
+          <Price>{price.split('.')[0]}</Price>
         </Spread>
-        <Context context={brewery} />
+        <Context>
+          {brewery}
+        </Context>
       </Beer>
     ))}
   </Wrapper>
