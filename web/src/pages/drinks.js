@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import styled from 'styled-components'
 import { mapEdgesToNodes } from '../lib/helpers'
 
 import DraftSection from '../components/draftSection'

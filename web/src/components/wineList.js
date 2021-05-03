@@ -1,5 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import Spread from '../components/spread'
 import Name from '../components/itemName'

@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes } from "../lib/helpers";
 
+import Wrapper from '../components/sectionWrapper'
 import Section from '../components/coffeeSection'
 
 const CoffeePage = ({data}) => {
@@ -21,13 +22,13 @@ const CoffeePage = ({data}) => {
     : [];
 
   return (
-    <div>
+    <Wrapper>
       <Title>Coffee Bar</Title>
       <Section title='Brewed Coffee' list={brewedNodes} />
       <Section title='Espresso Drink' list={espressoNodes} />
       <Section title='Other Beverages' list={otherNodes} />
       <Section title='Pastries' list={pastryNodes} />
-    </div>
+    </Wrapper>
   )
 }
 
