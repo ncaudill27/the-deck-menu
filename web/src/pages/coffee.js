@@ -1,9 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes } from "../lib/helpers";
 
-import Wrapper from '../components/sectionWrapper'
+import Layout from '../components/layout'
+import Header from '../components/sectionHeader'
 import Section from '../components/coffeeSection'
 
 const CoffeePage = ({data}) => {
@@ -22,22 +22,15 @@ const CoffeePage = ({data}) => {
     : [];
 
   return (
-    <Wrapper>
-      <Title>Coffee Bar</Title>
+    <Layout>
+      <Header>Coffee Bar</Header>
       <Section title='Brewed Coffee' list={brewedNodes} />
       <Section title='Espresso Drink' list={espressoNodes} />
       <Section title='Other Beverages' list={otherNodes} />
       <Section title='Pastries' list={pastryNodes} />
-    </Wrapper>
+    </Layout>
   )
 }
-
-const Title = styled.h1`
-  font-family: 'Original Surfer', sans-serif;
-  font-size: 1.9rem;
-`
-
-
 
 export const query = graphql`
   query {

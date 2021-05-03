@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes } from '../lib/helpers'
 
+import Layout from '../components/layout'
 import DraftSection from '../components/draftSection'
 import BeerSection from '../components/beerSection'
 import WineSection from '../components/wineSection'
@@ -30,12 +31,12 @@ const DrinksPage = ({data}) => {
 
     console.log(cocktailsNodes);
   return (
-    <div>
+    <Layout>
       <DraftSection list={draftNodes} />
       <BeerSection list={beerNodes} />
       <WineSection red={redNodes} white={whiteNodes} sparkling={sparklingNodes} />
       <CocktailSection list={cocktailsNodes} />
-    </div>
+    </Layout>
   )
 }
 

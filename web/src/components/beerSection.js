@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Wrapper from '../components/sectionWrapper'
+import Header from '../components/sectionHeader'
 import Spread from '../components/spread'
 import Name from '../components/itemName'
 import Context from '../components/itemContext'
@@ -9,6 +10,7 @@ import Price from '../components/itemPrice'
 
 const BeerSection = ({list}) => (
   <Wrapper>
+    <Header>Bottle &amp; Can Beer</Header>
     {list.map(({id, name, brewery, price}) => (
       <Beer key={id}>
         <Spread>
