@@ -1,9 +1,9 @@
 import React from 'react'
+import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes } from "../lib/helpers";
 
 import Layout from '../components/layout'
-import LetterheadWrapper from '../components/letterheadWrapper'
 import CoffeeWrapper from '../components/coffeeSection'
 import CoffeeList from '../components/coffeeList';
 
@@ -25,13 +25,22 @@ const CoffeePage = ({data}) => {
     console.log(data);
   return (
     <Layout>
-      <LetterheadWrapper id='coffee' padding={16}>
+      <CoffeeWrapper id='coffee' padding={16}>
         <CoffeeList brewed={brewedNodes} espresso={espressoNodes} other={otherNodes} pastry={pastryNodes} />
+        <CutLine />
         <CoffeeList brewed={brewedNodes} espresso={espressoNodes} other={otherNodes} pastry={pastryNodes} />
-      </LetterheadWrapper>
+      </CoffeeWrapper>
     </Layout>
   )
 }
+
+const CutLine = styled.div`
+  position: absolute;
+  left: 4.25in;
+  width: 0;
+  border: 1px dashed white;
+  height: 100%;
+`
 
 export const query = graphql`
   query {
