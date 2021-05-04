@@ -9,10 +9,10 @@ const CoffeeWrapper = ({children}) => (
 
 const Wrapper = styled.div`
   position: relative;
-  top: 50px;
-  height: 8in;
+  top: 80px;
+  height: calc(10in - 80px - 48px);
   width: calc(100% - 32px);
-  padding: 75px 40px 0;
+  padding: 96px 40px 0;
   background-color: white;
   justify-self: center;
 `

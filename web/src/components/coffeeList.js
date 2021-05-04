@@ -3,9 +3,8 @@ import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
 
 import CoffeeWrapper from './coffeeWrapper'
-import Header from '../components/sectionHeader'
 import Section from '../components/coffeeSection'
-
+import LogoArray from '../components/logoArray'
 
 const CoffeeList = ({brewed, espresso, other, pastry}) => (
   <CoffeeWrapper>
@@ -16,7 +15,7 @@ const CoffeeList = ({brewed, espresso, other, pastry}) => (
         height={150}
         quality={100}
         formats={["AUTO", "WEBP", "AVIF"]}
-        alt="The Fitzroy logo title"
+        alt="The Deck Logo"
       />
     </HeaderWrapper>
     <ColumnWrapper>
@@ -24,6 +23,7 @@ const CoffeeList = ({brewed, espresso, other, pastry}) => (
       <Section title='Espresso Drink' list={espresso} />
       <Section title='Other Beverages' list={other} />
       <Section title='Pastries' list={pastry} />
+      <LogoArray />
     </ColumnWrapper>
   </CoffeeWrapper>
 )
@@ -39,8 +39,8 @@ const HeaderWrapper = styled.div`
 const ColumnWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 600px;
+  justify-content: space-between;
+  height: calc(7in + 32px);
 `
 
 export default CoffeeList

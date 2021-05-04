@@ -12,7 +12,7 @@ const LetterheadWrapper = ({children, padding}) => (
 
 const Wrapper = styled.div`
   width: 8.5in;
-  height: 9in;
+  height: 10in;
   position: relative;
   top: 0;
   right: 0;
@@ -24,7 +24,7 @@ const Wrapper = styled.div`
   ${CoffeePage} & {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    column-gap: 16px;
+    column-gap: 24px;
     background: linear-gradient(
       180deg,
       hsla(333, 81%, 57%, 0.22) 0%,
