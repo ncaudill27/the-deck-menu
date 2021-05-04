@@ -4,11 +4,11 @@ import PropTypes from 'prop-types'
 
 import CoffeePage from '../pages/coffee'
 
-const LetterheadWrapper = ({children, padding}) => (
-  <Wrapper style={{'--padding': padding + 'px'}}>
+const LetterheadWrapper = React.forwardRef( ({children, padding}, ref) => (
+  <Wrapper ref={ref} style={{'--padding': padding + 'px'}}>
     {children}
   </Wrapper>
-)
+))
 
 const Wrapper = styled.div`
   width: 8.5in;

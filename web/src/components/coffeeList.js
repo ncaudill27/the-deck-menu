@@ -33,7 +33,8 @@ const HeaderWrapper = styled.div`
   top: -75px;
   left: 50%;
   transform: translateX(-75px);
-  width: 100%;
+  width: 150px;
+  height: 150px;
 `
 
 const ColumnWrapper = styled.div`

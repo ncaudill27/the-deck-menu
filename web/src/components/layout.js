@@ -5,10 +5,10 @@ import GlobalStyles from '../styles/globalStyles'
 import MaxWidthWrapper from '../components/maxWidthWrapper'
 
 const Layout = ({ children }) => (
-  <MaxWidthWrapper>
-    <GlobalStyles />
-    <Main>{children}</Main>
-  </MaxWidthWrapper>
+    <>
+      <GlobalStyles />
+      <Main>{children}</Main>
+    </>
 );
 
 const Main = styled.main`
