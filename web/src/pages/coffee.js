@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import { useReactToPrint } from 'react-to-print'
 
 import Layout from '../components/layout'
-import LetterheadWrapper from '../components/letterheadWrapper'
+import CoffeeLetterhead from '../components/coffeeLetterhead'
 import CoffeeList from '../components/coffeeList';
 import PrintButton from '../components/printButton'
 
@@ -34,11 +34,11 @@ const CoffeePage = ({data}) => {
     <Layout>
       <div style={{position: 'relative'}}>
         <PrintButton handlePrint={handlePrint} />
-        <LetterheadWrapper id='coffee' padding={16} ref={menuEl}>
+        <CoffeeLetterhead id='coffee' padding={16} ref={menuEl}>
           <CoffeeList brewed={brewedNodes} espresso={espressoNodes} other={otherNodes} pastry={pastryNodes} />
           <CutLine />
           <CoffeeList brewed={brewedNodes} espresso={espressoNodes} other={otherNodes} pastry={pastryNodes} />
-        </LetterheadWrapper>
+        </CoffeeLetterhead>
       </div>
     </Layout>
   )

@@ -5,6 +5,8 @@ import GraphQLErrorList from "../components/graphql-error-list";
 import SEO from "../components/seo";
 import Layout from "../components/layout";
 
+import MaxWidthWrapper from '../components/maxWidthWrapper'
+
 export const query = graphql`
   query {
     site {
@@ -41,11 +43,13 @@ const IndexPage = (props) => {
         title={site.title}
         description={site.description}
       />
-        <Wrapper>
-          <Title>{site.title}</Title>
-          <StyledLink to='/coffee'>Coffee</StyledLink>
-          <StyledLink to='/drinks'>Drinks</StyledLink>
-        </Wrapper>
+        <MaxWidthWrapper width={1000}>
+          <Wrapper>
+            <Title>{site.title}</Title>
+            <StyledLink to='/coffee'>Coffee</StyledLink>
+            <StyledLink to='/drinks'>Drinks</StyledLink>
+          </Wrapper>
+        </MaxWidthWrapper>
     </Layout>
   );
 };
