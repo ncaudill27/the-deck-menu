@@ -5,7 +5,7 @@ import GlobalStyles from '../styles/globalStyles'
 import MaxWidthWrapper from '../components/maxWidthWrapper'
 
 const Layout = ({ children }) => (
-  <MaxWidthWrapper width={1000}>
+  <MaxWidthWrapper>
     <GlobalStyles />
     <Main>{children}</Main>
   </MaxWidthWrapper>

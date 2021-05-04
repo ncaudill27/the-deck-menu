@@ -51,7 +51,6 @@ const IndexPage = (props) => {
 };
 
 const Wrapper = styled.div`
-  height: 100%;
   padding: 40px 16px;
   display: flex;
   flex-direction: column;

@@ -12,7 +12,7 @@ const LetterheadWrapper = ({children, padding}) => (
 
 const Wrapper = styled.div`
   width: 8.5in;
-  height: 11in;
+  height: 9in;
   position: relative;
   top: 0;
   right: 0;

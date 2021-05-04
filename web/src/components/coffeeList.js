@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { StaticImage } from "gatsby-plugin-image"
 
 import CoffeeWrapper from './coffeeWrapper'
 import Header from '../components/sectionHeader'
@@ -9,7 +10,14 @@ import Section from '../components/coffeeSection'
 const CoffeeList = ({brewed, espresso, other, pastry}) => (
   <CoffeeWrapper>
     <HeaderWrapper>
-      <Header>Coffee Bar</Header>
+      <StaticImage
+        src="../images/main_logo.png"
+        width={150}
+        height={150}
+        quality={100}
+        formats={["AUTO", "WEBP", "AVIF"]}
+        alt="The Fitzroy logo title"
+      />
     </HeaderWrapper>
     <ColumnWrapper>
       <Section title='Brewed Coffee' list={brewed} />
@@ -21,19 +29,18 @@ const CoffeeList = ({brewed, espresso, other, pastry}) => (
 )
 
 const HeaderWrapper = styled.div`
+  position: absolute;
+  top: -75px;
+  left: 50%;
+  transform: translateX(-75px);
   width: 100%;
-  height: 90px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 `
 
 const ColumnWrapper = styled.div`
-  margin-top: -32px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  height: 670px;
+  height: 600px;
 `
 
 export default CoffeeList

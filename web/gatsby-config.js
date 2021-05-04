@@ -16,6 +16,15 @@ module.exports = {
     "gatsby-plugin-postcss",
     "gatsby-plugin-react-helmet",
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
     {
       resolve: "gatsby-source-sanity",
       options: {

@@ -8,8 +8,11 @@ const CoffeeWrapper = ({children}) => (
 )
 
 const Wrapper = styled.div`
+  position: relative;
+  top: 50px;
+  height: 8in;
   width: calc(100% - 32px);
-  padding: 0 40px;
+  padding: 75px 40px 0;
   background-color: white;
   justify-self: center;
 `
