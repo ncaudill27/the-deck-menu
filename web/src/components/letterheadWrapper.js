@@ -2,13 +2,10 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-const LetterheadWrapper = React.forwardRef(({children, padding, top, ...props}, ref) => (
+const LetterheadWrapper = React.forwardRef(({children, ...props}, ref) => (
   <Wrapper
     ref={ref}
-    style={{
-      '--padding': padding + 'px',
-      '--top': top + 'px'
-    }}
+    {...props}
   >
     {children}
   </Wrapper>
@@ -23,8 +20,8 @@ const Wrapper = styled.div`
   bottom: 0;
   left: 0;
   margin: auto;
-  padding: var(--padding);
-  padding-top: var(--top);
+  padding: 40px;
+  padding-top: 56px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 48px;

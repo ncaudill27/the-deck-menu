@@ -6,7 +6,7 @@ import { useReactToPrint } from 'react-to-print'
 import PrintButton from './printButton'
 import CoffeeList from './coffeeList'
 
-const CoffeeWrapper = ({brewed, espresso, other, pastry, padding}) => {
+const CoffeeWrapper = ({brewed, espresso, other, pastry}) => {
   const menuEl = useRef()
 
   const handlePrint = useReactToPrint({
@@ -16,7 +16,7 @@ const CoffeeWrapper = ({brewed, espresso, other, pastry, padding}) => {
   return (
     <div style={{position: 'relative'}}>
       <PrintButton handlePrint={handlePrint} />
-      <Wrapper ref={menuEl} style={{'--padding': padding + 'px'}}>
+      <Wrapper ref={menuEl}>
         <CoffeeList brewed={brewed} espresso={espresso} other={other} pastry={pastry} />
         <CutLine />
         <CoffeeList brewed={brewed} espresso={espresso} other={other} pastry={pastry} />
@@ -34,7 +34,7 @@ const Wrapper = styled.div`
   bottom: 0;
   left: 0;
   margin: auto;
-  padding: var(--padding);
+  padding: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 24px;

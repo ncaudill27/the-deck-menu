@@ -9,7 +9,6 @@ import Price from '../components/itemPrice'
 import Context from '../components/itemContext'
 import DrinkSection from './drinkSection'
 import DrinkHeader from './drinkHeader'
-import MaxWidthWrapper from './maxWidthWrapper'
 
 const CocktailSection = ({list}) => (
   <DrinkSection>

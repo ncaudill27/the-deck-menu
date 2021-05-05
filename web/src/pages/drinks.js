@@ -1,7 +1,7 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useRef } from 'react'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes } from '../lib/helpers'
+import { useReactToPrint } from 'react-to-print'
 
 import Layout from '../components/layout'
 import LetterheadWrapper from '../components/letterheadWrapper'
@@ -9,8 +9,14 @@ import DraftSection from '../components/draftSection'
 import BeerSection from '../components/beerSection'
 import WineSection from '../components/wineSection'
 import CocktailSection from '../components/cocktailSection'
+import PrintButton from '../components/printButton'
 
 const DrinksPage = ({data}) => {
+  const menuEl = useRef()
+
+  const handlePrint = useReactToPrint({
+    content: () => menuEl.current,
+  });
 
   const draftNodes = !!data?.draft
     ? mapEdgesToNodes(data.draft)
@@ -31,15 +37,17 @@ const DrinksPage = ({data}) => {
     ? mapEdgesToNodes(data.cocktail)
     : [];
 
-    console.log(cocktailsNodes);
   return (
     <Layout>
-      <LetterheadWrapper padding={40} top={56}>
-        <DraftSection list={draftNodes} />
-        <BeerSection list={beerNodes} />
-        <WineSection red={redNodes} white={whiteNodes} sparkling={sparklingNodes} />
-        <CocktailSection list={cocktailsNodes} />
-      </LetterheadWrapper>
+      <div style={{position: 'relative'}}>
+        <PrintButton handlePrint={handlePrint} />
+        <LetterheadWrapper ref={menuEl}>
+          <DraftSection list={draftNodes} />
+          <BeerSection list={beerNodes} />
+          <WineSection red={redNodes} white={whiteNodes} sparkling={sparklingNodes} />
+          <CocktailSection list={cocktailsNodes} />
+        </LetterheadWrapper>
+      </div>
     </Layout>
   )
 }

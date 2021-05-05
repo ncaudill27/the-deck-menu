@@ -34,7 +34,7 @@ const CoffeePage = ({data}) => {
     <Layout>
       <div style={{position: 'relative'}}>
         <PrintButton handlePrint={handlePrint} />
-        <CoffeeLetterhead id='coffee' padding={16} ref={menuEl}>
+        <CoffeeLetterhead ref={menuEl}>
           <CoffeeList
             brewed={brewedNodes}
             espresso={espressoNodes}

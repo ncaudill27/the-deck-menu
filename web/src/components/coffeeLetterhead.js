@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-const CoffeeLetterhead = React.forwardRef(({children, padding}, ref) => (
-  <Wrapper ref={ref} style={{'--padding': padding + 'px'}}>
+const CoffeeLetterhead = React.forwardRef(({children}, ref) => (
+  <Wrapper ref={ref}>
     {children}
   </Wrapper>
 ))
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   bottom: 0;
   left: 0;
   margin: auto;
-  padding: var(--padding);
+  padding: 16px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 24px;
