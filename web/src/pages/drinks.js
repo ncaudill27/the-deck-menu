@@ -1,8 +1,10 @@
 import React from 'react'
+import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes } from '../lib/helpers'
 
 import Layout from '../components/layout'
+import LetterheadWrapper from '../components/letterheadWrapper'
 import DraftSection from '../components/draftSection'
 import BeerSection from '../components/beerSection'
 import WineSection from '../components/wineSection'
@@ -32,10 +34,12 @@ const DrinksPage = ({data}) => {
     console.log(cocktailsNodes);
   return (
     <Layout>
-      <DraftSection list={draftNodes} />
-      <BeerSection list={beerNodes} />
-      <WineSection red={redNodes} white={whiteNodes} sparkling={sparklingNodes} />
-      <CocktailSection list={cocktailsNodes} />
+      <LetterheadWrapper padding={40} top={56}>
+        <DraftSection list={draftNodes} />
+        <BeerSection list={beerNodes} />
+        <WineSection red={redNodes} white={whiteNodes} sparkling={sparklingNodes} />
+        <CocktailSection list={cocktailsNodes} />
+      </LetterheadWrapper>
     </Layout>
   )
 }

@@ -35,9 +35,19 @@ const CoffeePage = ({data}) => {
       <div style={{position: 'relative'}}>
         <PrintButton handlePrint={handlePrint} />
         <CoffeeLetterhead id='coffee' padding={16} ref={menuEl}>
-          <CoffeeList brewed={brewedNodes} espresso={espressoNodes} other={otherNodes} pastry={pastryNodes} />
+          <CoffeeList
+            brewed={brewedNodes}
+            espresso={espressoNodes}
+            other={otherNodes}
+            pastry={pastryNodes}
+          />
           <CutLine />
-          <CoffeeList brewed={brewedNodes} espresso={espressoNodes} other={otherNodes} pastry={pastryNodes} />
+          <CoffeeList
+            brewed={brewedNodes}
+            espresso={espressoNodes}
+            other={otherNodes}
+            pastry={pastryNodes}
+          />
         </CoffeeLetterhead>
       </div>
     </Layout>
