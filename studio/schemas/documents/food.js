@@ -9,15 +9,56 @@ export default {
       title: "Name",
     },
     {
+      name: "is_gluten_free",
+      type: "boolean",
+      title: "Gluten Free"
+    },
+    {
+      name: "is_kid_menu",
+      type: "boolean",
+      title: "Kid's Menu"
+    },
+    {
+      name: "is_dessert",
+      type: "boolean",
+      title: "Dessert Menu"
+    },
+    {
       name: "price",
       type: "number",
       title: "Price",
+      description: 'If item does not have one "standard" price leave this field blank and input price points in Additional Options below.'
     },
     {
-      title: 'Ingredients',
-      name: 'ingredients',
-      type: 'array',
-      of: [{type: 'string'}]
+      title: 'Description',
+      name: 'description',
+      type: 'bodyPortableText'
+    },
+    {
+      name: "additional_options",
+      type: "array",
+      title: "Additional Options",
+      description: "Each additional option will be printed on it's own line.",
+      of: [
+        {
+          name: "options",
+          type: "object",
+          title: "Options",
+          fields: [
+            {
+              name: 'context',
+              type: 'string',
+              title: 'Context',
+            },
+            {
+              name: 'price',
+              type: 'number',
+              title: 'Price',
+              description: "If multiple options share the same price point use the main Price input above instead."
+            }
+          ]
+        },
+      ]
     },
     {
       name: "mainImage",
