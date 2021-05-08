@@ -8,22 +8,23 @@ const FoodItem = ({name, price, additional_options, _rawDescription, is_gluten_f
   <Wrapper>
     <Name>
       {name}
+      {' '}
+      { price && <Price>{price}</Price> }
       { is_gluten_free && <Gluten>{' '}GF</Gluten>}
     </Name>
     <Description>
       <PortableText blocks={_rawDescription} />
-      { price && <Price>{price}</Price> }
-      <Options>
-        {additional_options.map(({price, context}) => (
-          <>
-            {context}
-            {' '}
-            {price && <Price>{price}</Price>}
-            {' '}
-          </>
-        ))}
-      </Options>
     </Description>
+    <Options>
+      {additional_options.map(({price, context}) => (
+        <div key={context}>
+          {context}
+          {' '}
+          {price && <OptPrice>{price}</OptPrice>}
+          {' '}
+        </div>
+      ))}
+    </Options>
   </Wrapper>
 
 )
@@ -44,10 +45,18 @@ const Gluten = styled.span`
 `
 
 const Description = styled.div`
+  position: relative;
   line-height: 1.15;
 `
 
 const Price = styled.span`
+  font-weight: 600;
+
+  &:before {
+    content: '$';
+  }
+`
+const OptPrice = styled.span`
   font-weight: 600;
 
   &:before {
