@@ -22,7 +22,7 @@ const FoodMenu = ({list}) => {
         <WhiteBackground>
           <FoodWrapper>
             {list.map(item => (
-              <FoodItem {...item} />
+              <FoodItem key={item.id} {...item} />
             ))}
           </FoodWrapper>        
           <LogoWrapper>

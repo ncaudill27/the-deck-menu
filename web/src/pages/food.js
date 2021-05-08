@@ -29,8 +29,10 @@ export const query = graphql`
     food: allSanityFood(filter: {is_dessert: {ne: true}, is_kid_menu: {ne: true}}) {
       edges {
         node {
+          id
           name
           price
+          is_gluten_free
           _rawDescription(resolveReferences: {maxDepth: 10})
           additional_options {
             price
@@ -42,6 +44,7 @@ export const query = graphql`
     kids: allSanityFood(filter: {is_kid_menu: {eq: true}}) {
       edges {
         node {
+          id
           name
           price
           _rawDescription(resolveReferences: {maxDepth: 10})
@@ -55,6 +58,7 @@ export const query = graphql`
     dessert: allSanityFood(filter: {is_dessert: {eq: true}}) {
       edges {
         node {
+          id
           name
           price
           _rawDescription(resolveReferences: {maxDepth: 10})
