@@ -1,4 +1,5 @@
 import React, { useRef } from 'react'
+import styled from 'styled-components'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes } from '../lib/helpers'
 import { useReactToPrint } from 'react-to-print'
@@ -41,16 +42,25 @@ const DrinksPage = ({data}) => {
     <Layout>
       <div style={{position: 'relative'}}>
         <PrintButton handlePrint={handlePrint} />
-        <LetterheadWrapper ref={menuEl}>
+        <MenuWrapper ref={menuEl}>
           <DraftSection list={draftNodes} />
           <BeerSection list={beerNodes} />
           <WineSection red={redNodes} white={whiteNodes} sparkling={sparklingNodes} />
           <CocktailSection list={cocktailsNodes} />
-        </LetterheadWrapper>
+        </MenuWrapper>
       </div>
     </Layout>
   )
 }
+
+const MenuWrapper = styled(LetterheadWrapper)`
+  padding: 40px;
+  padding-top: 56px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  font-size: 1.1rem;
+`
 
 export const query = graphql`
   query {

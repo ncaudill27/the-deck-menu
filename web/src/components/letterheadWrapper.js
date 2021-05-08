@@ -20,12 +20,6 @@ const Wrapper = styled.div`
   bottom: 0;
   left: 0;
   margin: auto;
-  padding: 40px;
-  padding-top: 56px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  font-size: 1.1rem;
   background: linear-gradient(
     180deg,
     hsla(333, 81%, 57%, 0.22) 0%,
