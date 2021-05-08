@@ -7,7 +7,9 @@ import PortableText from './portableText'
 const FoodItem = ({name, price, additional_options, _rawDescription}) => (
   <Wrapper>
     <Name>{name}</Name>
-    <PortableText blocks={_rawDescription} />
+    <Description>
+      <PortableText blocks={_rawDescription} />
+    </Description>
   </Wrapper>
 
 )
@@ -15,18 +17,15 @@ const FoodItem = ({name, price, additional_options, _rawDescription}) => (
 const Wrapper = styled.div`
   padding: 8px;
   white-space: noframes;
-
-  &:first-of-type {
-    padding-top: 0;
-  }
-
-  &:last-of-type {
-    padding-bottom: 0;
-  }
+  font-size: 0.9rem;
 `
 
 const Name = styled(Header)`
-  font-size: 1.2rem;
+  font-size: 1rem;
+`
+
+const Description = styled.div`
+  line-height: 1.15;
 `
 
 export default FoodItem

@@ -50,7 +50,7 @@ const WhiteBackground = styled.div`
   position: relative;
   background: white; 
   height: 100%;
-  padding: 32px;
+  padding: 24px;
 `
 
 const FoodWrapper = styled.div`
