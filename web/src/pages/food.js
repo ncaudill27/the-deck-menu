@@ -1,7 +1,6 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes } from "../lib/helpers"
-import { useReactToPrint } from 'react-to-print'
 
 import Layout from '../components/layout'
 import FoodMenu from '../components/foodMenu'
@@ -19,7 +18,11 @@ const FoodPage = ({data}) => {
 
   return (
     <Layout>
-      <FoodMenu list={foodNodes} />
+      <FoodMenu
+        foodList={foodNodes}
+        kidsList={kidsNodes}
+        dessertList={dessertNodes}
+      />
     </Layout>
   )
 }
@@ -61,6 +64,7 @@ export const query = graphql`
           id
           name
           price
+          is_gluten_free
           _rawDescription(resolveReferences: {maxDepth: 10})
           additional_options {
             price

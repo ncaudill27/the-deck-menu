@@ -5,27 +5,28 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 import PrintButton from '../components/printButton';
 import LetterheadWrapper from '../components/letterheadWrapper';
+import Header from './sectionHeader'
 import FoodItem from './foodItem';
 import FoodStack from './foodStack';
 
-const FoodMenu = ({list}) => {
+const FoodMenu = ({foodList, kidsList, dessertList}) => {
   const menuEl = useRef()
 
   const handlePrint = useReactToPrint({
     content: () => menuEl.current
   })
 
-  console.log(list)
-  // split list into 3 seperate array to stack more nicely
+  console.log(foodList)
+  // split foodList into 3 separate array to stack more nicely
   let m, n
   let first, second, third
   
-  m = Math.ceil(list.length / 3);
-  n = Math.ceil(2 * list.length / 3);
+  m = Math.ceil(foodList.length / 3);
+  n = Math.ceil(2 * foodList.length / 3);
 
-  first = list.slice(0, m);
-  second = list.slice(m, n);
-  third = list.slice(n, list.length);
+  first = foodList.slice(0, m);
+  second = foodList.slice(m, n);
+  third = foodList.slice(n, foodList.length);
   
   return (
     <div style={{position: 'relative'}}>
@@ -34,8 +35,20 @@ const FoodMenu = ({list}) => {
         <WhiteBackground>
           <FoodWrapper>
             <FoodStack list={first} />
-            <FoodStack list={second} />
-            <FoodStack list={third} />
+            <FoodStack list={second}>
+              <SpacerLine />
+              <Header>Dessert</Header>
+              {dessertList.map(item => (
+                <FoodItem key={item.id} {...item} />
+              ))}
+            </FoodStack>
+            <FoodStack list={third}>
+            <SpacerLine />
+              <Header>Kids Menu</Header>
+              {kidsList.map(item => (
+                <FoodItem key={item.id} {...item} />
+              ))}
+            </FoodStack>
           </FoodWrapper>        
           <LogoWrapper>
             <StaticImage
@@ -68,7 +81,6 @@ const WhiteBackground = styled.div`
 const FoodWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
 `
 
 const LogoWrapper = styled.div`
@@ -78,6 +90,14 @@ const LogoWrapper = styled.div`
   transform: translateX(-75px);
   width: 150px;
   height: 150px;
+`
+
+const SpacerLine = styled.div`
+  height: 2px;
+  width: calc(100% - 16px);
+  position: relative;
+  background-color: black;
+  margin-bottom: 8px;
 `
 
 export default FoodMenu

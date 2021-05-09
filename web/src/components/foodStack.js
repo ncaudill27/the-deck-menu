@@ -2,11 +2,12 @@ import React from 'react'
 import styled from 'styled-components'
 import FoodItem from './foodItem'
 
-const FoodStack = ({list}) => (
+const FoodStack = ({list, children}) => (
   <Wrapper>
     {list.map(item => (
       <FoodItem key={item.id} {...item} />
     ))}
+    {children}
   </Wrapper>
 )
 

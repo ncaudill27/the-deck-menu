@@ -10,7 +10,7 @@ const FoodItem = ({name, price, additional_options, _rawDescription, is_gluten_f
       {name}
       {' '}
       { price && <Price>{price}</Price> }
-      { is_gluten_free && <Gluten>{' '}GF</Gluten>}
+      { is_gluten_free && <Gluten>{' '}GF</Gluten> }
     </Name>
     <Description>
       <PortableText blocks={_rawDescription} />
@@ -41,6 +41,7 @@ const Name = styled(Header)`
 
 const Gluten = styled.span`
   font-family: 'Work Sans', sans-serif;
+  font-size: 0.8rem;
   font-weight: 900;
 `
 
