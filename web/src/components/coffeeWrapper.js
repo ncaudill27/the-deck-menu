@@ -1,39 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-import PropTypes from 'prop-types'
 
-const CoffeeWrapper = ({children, padding}) => (
-  <Wrapper style={{'--padding': padding + 'px'}}>
+const CoffeeWrapper = ({children}) => (
+  <Wrapper>
     {children}
   </Wrapper>
 )
 
 const Wrapper = styled.div`
-  width: 8.5in;
-  height: 10in;
   position: relative;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  padding: var(--padding);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 24px;
-  background: linear-gradient(
-    180deg,
-    hsla(333, 81%, 57%, 0.22) 0%,
-    hsla(161, 86%, 84%, 1) 100%
-  );
-  `
-
-CoffeeWrapper.propTypes = {
-  padding: PropTypes.number
-}
-
-CoffeeWrapper.defaultProps = {
-  padding: 0
-}
+  top: 80px;
+  height: calc(10in - 80px - 48px);
+  width: calc(100% - 32px);
+  padding: 96px 40px 0;
+  background-color: white;
+  justify-self: center;
+`
 
 export default CoffeeWrapper
