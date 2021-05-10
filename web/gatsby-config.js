@@ -47,7 +47,7 @@ module.exports = {
             },
             {
               family: 'Work Sans',
-              variants: ['300', '400', '500', '600']
+              variants: ['300', '400', '500', '600', '900']
             }
           ],
         },

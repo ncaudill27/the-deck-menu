@@ -8,7 +8,7 @@ const Subheader = ({children}) => (
 )
 
 const StyledSubheader = styled.h3`
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-family: 'Work Sans', sans-serif;
   margin: 0;
   text-transform: uppercase;

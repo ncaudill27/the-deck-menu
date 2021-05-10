@@ -2,24 +2,25 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-const LetterheadWrapper = React.forwardRef(({children, ...props}, ref) => (
-  <Wrapper
-    ref={ref}
-    {...props}
-  >
+const CoffeeLetterhead = React.forwardRef(({children}, ref) => (
+  <Wrapper ref={ref}>
     {children}
   </Wrapper>
 ))
 
 const Wrapper = styled.div`
   width: 8.5in;
-  height: 11in;
+  height: 10in;
   position: relative;
   top: 0;
   right: 0;
   bottom: 0;
   left: 0;
   margin: auto;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 24px;
   background: linear-gradient(
     180deg,
     hsla(333, 81%, 57%, 0.22) 0%,
@@ -27,12 +28,12 @@ const Wrapper = styled.div`
   );
 `
 
-LetterheadWrapper.propTypes = {
+CoffeeLetterhead.propTypes = {
   padding: PropTypes.number
 }
 
-LetterheadWrapper.defaultProps = {
+CoffeeLetterhead.defaultProps = {
   padding: 0
 }
 
-export default LetterheadWrapper
+export default CoffeeLetterhead

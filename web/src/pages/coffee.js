@@ -1,14 +1,21 @@
-import React from 'react'
-import styled from 'styled-components'
+import React, { useRef } from 'react'
 import { graphql } from 'gatsby'
 import { mapEdgesToNodes } from "../lib/helpers";
+import styled from 'styled-components'
+import { useReactToPrint } from 'react-to-print'
 
 import Layout from '../components/layout'
-import CoffeeWrapper from '../components/coffeeSection'
+import CoffeeLetterhead from '../components/coffeeLetterhead'
 import CoffeeList from '../components/coffeeList';
+import PrintButton from '../components/printButton'
 
 const CoffeePage = ({data}) => {
+  const menuEl = useRef()
   
+  const handlePrint = useReactToPrint({
+    content: () => menuEl.current,
+  });
+
   const brewedNodes = !!data?.brewed
     ? mapEdgesToNodes(data.brewed)
     : [];
@@ -25,11 +32,24 @@ const CoffeePage = ({data}) => {
     console.log(data);
   return (
     <Layout>
-      <CoffeeWrapper id='coffee' padding={16}>
-        <CoffeeList brewed={brewedNodes} espresso={espressoNodes} other={otherNodes} pastry={pastryNodes} />
-        <CutLine />
-        <CoffeeList brewed={brewedNodes} espresso={espressoNodes} other={otherNodes} pastry={pastryNodes} />
-      </CoffeeWrapper>
+      <div style={{position: 'relative'}}>
+        <PrintButton handlePrint={handlePrint} />
+        <CoffeeLetterhead ref={menuEl}>
+          <CoffeeList
+            brewed={brewedNodes}
+            espresso={espressoNodes}
+            other={otherNodes}
+            pastry={pastryNodes}
+          />
+          <CutLine />
+          <CoffeeList
+            brewed={brewedNodes}
+            espresso={espressoNodes}
+            other={otherNodes}
+            pastry={pastryNodes}
+          />
+        </CoffeeLetterhead>
+      </div>
     </Layout>
   )
 }
@@ -38,8 +58,8 @@ const CutLine = styled.div`
   position: absolute;
   left: 4.25in;
   width: 0;
-  border: 1px dashed white;
   height: 100%;
+  border: 0.5px dashed white;
 `
 
 export const query = graphql`

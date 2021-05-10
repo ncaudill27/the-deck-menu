@@ -18,6 +18,7 @@ import bioPortableText from "./objects/bioPortableText";
 import excerptPortableText from "./objects/excerptPortableText";
 import mainImage from "./objects/mainImage";
 import ingredientCocktail from './objects/ingredientCocktail';
+import options from './objects/options'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -35,6 +36,7 @@ export default createSchema({
     cocktail,
     // category,
     mainImage,
+    options,
     ingredientCocktail,
     bodyPortableText,
     bioPortableText,

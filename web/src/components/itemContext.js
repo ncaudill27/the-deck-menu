@@ -10,6 +10,7 @@ const Context = styled.p`
   margin: 0;
   font-size: 0.9rem;
   color: hsl(0, 0%, 40%);
+  max-width: 280px;
 `
 ItemContext.propTypes = {
   context: PropTypes.string.isRequired

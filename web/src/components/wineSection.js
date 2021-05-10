@@ -1,13 +1,13 @@
 import React from 'react'
 
-import Wrapper from '../components/sectionWrapper'
-import Header from '../components/sectionHeader'
 import Subheader from '../components/subheader'
 import WineList from '../components/wineList'
+import DrinkHeader from './drinkHeader'
+import DrinkSection from './drinkSection'
 
 const WineSection = ({red, white, sparkling}) => (
-  <Wrapper>
-    <Header>Wine Selection</Header>
+  <DrinkSection>
+    <DrinkHeader>Wine Selection</DrinkHeader>
     <Subheader>
       Red
     </Subheader>
@@ -20,7 +20,7 @@ const WineSection = ({red, white, sparkling}) => (
       Sparkling
     </Subheader>
     <WineList list={sparkling} />
-  </Wrapper>
+  </DrinkSection>
 )
 
 export default WineSection
