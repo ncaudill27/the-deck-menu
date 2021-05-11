@@ -11,10 +11,10 @@
 :root {
   /* Brand colors */
   
-  --brand-primary: hsla(161, 76%, 35%, 1);
-  --brand-primary--inverted: hsla(161, 76%, 50%, 1);
-  --brand-secondary: hsla(333, 81%, 92%, 1);
-  --brand-secondary--inverted: hsla(333, 81%, 57%, 1);
+  --brand-primary: #159d72;
+  --brand-primary--inverted: #1fe0a3;
+  --brand-secondary: #fbdae9;
+  --brand-secondary--inverted: #ea3988;
  
   /* Typography */
   
