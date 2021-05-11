@@ -1,11 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
-import { StaticImage } from "gatsby-plugin-image"
 
 import Logo from "../images/svg/main_logo.svg";
 import CoffeeWrapper from './coffeeWrapper'
 import Section from '../components/coffeeSection'
-import LogoArray from '../components/logoArray'
+// import LogoArray from '../components/logoArray'
 
 const CoffeeList = ({brewed, espresso, other, pastry}) => (
   <CoffeeWrapper>

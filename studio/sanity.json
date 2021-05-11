@@ -24,6 +24,10 @@
       "path": "./schemas/schema.js"
     },
     {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "./src/logo/logo.js"
+    },
+    {
       "implements": "part:@sanity/base/theme/variables/override-style",
       "path": "./src/styles/variables.css"
     },

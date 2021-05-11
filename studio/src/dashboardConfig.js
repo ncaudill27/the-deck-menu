@@ -9,7 +9,7 @@ export default {
             name: "netlify",
             options: {
               description:
-                "NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.",
+                `NOTE: Because these sites are static builds, they need to be re-deployed to see the changes when documents are published.\n\nIf build fails contact nelson.a.caudill@gmail.com`,
               sites: [
                 {
                   buildHookId:
@@ -20,7 +20,7 @@ export default {
                 },
                 {
                   buildHookId: "60899f1148ac561432f2d8c9",
-                  title: "Blog Website",
+                  title: "The Deck Menus ",
                   name: "the-deck-menu",
                   apiId: "4da3fe80-ff6d-44cf-b247-4881ca9bfc35",
                 },

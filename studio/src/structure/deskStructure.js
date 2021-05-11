@@ -1,12 +1,5 @@
 import S from "@sanity/desk-tool/structure-builder";
 import { MdLocalBar, MdLocalCafe, MdLocalDrink, MdOpacity, MdRestaurantMenu } from "react-icons/md";
-import IframePreview from "../previews/IframePreview";
-
-// Web preview configuration
-const remoteURL = "https://the-deck-menu.netlify.app";
-const localURL = "http://localhost:8000";
-const previewURL =
-  window.location.hostname === "localhost" ? localURL : remoteURL;
 
 export const getDefaultDocumentNode = (props) => {
   /**
@@ -19,11 +12,7 @@ export const getDefaultDocumentNode = (props) => {
   const { schemaType } = props;
   if (schemaType == "post") {
     return S.document().views([
-      S.view.form(),
-      S.view
-        .component(IframePreview)
-        .title("Web preview")
-        .options({ previewURL }),
+      S.view.form()
     ]);
   }
   return S.document().views([S.view.form()]);

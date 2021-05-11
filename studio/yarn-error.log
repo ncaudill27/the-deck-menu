@@ -1,0 +1,68 @@
+Arguments: 
+  /home/chappie/.nvm/versions/node/v14.16.0/bin/node /home/chappie/.nvm/versions/node/v14.16.0/lib/node_modules/@sanity/cli/vendor/yarn add sanity-plugin-brand-logo --json --non-interactive --ignore-engines --registry https://registry.npmjs.org
+
+PATH: 
+  /home/chappie/the-deck-menu/studio/node_modules/.bin:/home/chappie/the-deck-menu/node_modules/.bin:/home/chappie/node_modules/.bin:/home/node_modules/.bin:/node_modules/.bin:/home/chappie/.nvm/versions/node/v14.16.0/bin:/home/chappie/.nvm/versions/node/v14.16.0/lib/node_modules/vendor:/home/chappie/.nvm/versions/node/v14.16.0/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/mnt/c/Program Files/WindowsApps/CanonicalGroupLimited.UbuntuonWindows_2004.2021.222.0_x64__79rhkp1fndgsc:/mnt/c/windows/system32:/mnt/c/windows:/mnt/c/windows/System32/Wbem:/mnt/c/windows/System32/WindowsPowerShell/v1.0/:/mnt/c/windows/System32/OpenSSH/:/mnt/c/Users/nelso/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/nelso/AppData/Local/Programs/Microsoft VS Code/bin:/snap/bin
+
+Yarn version: 
+  1.6.0
+
+Node version: 
+  14.16.0
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.npmjs.org/sanity-plugin-brand-logo: Not found
+      at Request.params.callback [as _callback] (/home/chappie/.nvm/versions/node/v14.16.0/lib/node_modules/@sanity/cli/vendor/yarn:65357:18)
+      at Request.self.callback (/home/chappie/.nvm/versions/node/v14.16.0/lib/node_modules/@sanity/cli/vendor/yarn:133185:22)
+      at Request.emit (events.js:315:20)
+      at Request.<anonymous> (/home/chappie/.nvm/versions/node/v14.16.0/lib/node_modules/@sanity/cli/vendor/yarn:134168:10)
+      at Request.emit (events.js:315:20)
+      at IncomingMessage.<anonymous> (/home/chappie/.nvm/versions/node/v14.16.0/lib/node_modules/@sanity/cli/vendor/yarn:134088:12)
+      at Object.onceWrapper (events.js:421:28)
+      at IncomingMessage.emit (events.js:327:22)
+      at endReadableNT (internal/streams/readable.js:1327:12)
+      at processTicksAndRejections (internal/process/task_queues.js:80:21)
+
+npm manifest: 
+  {
+    "private": true,
+    "name": "the-deck-menu-studio",
+    "version": "1.0.15",
+    "main": "package.json",
+    "author": "Sanity <hello@sanity.io>",
+    "scripts": {
+      "dev": "sanity start",
+      "format": "prettier-eslint --write \"**/*.js\" \"!node_modules/**\"",
+      "build": "sanity build",
+      "graphql-deploy": "sanity graphql deploy --playground",
+      "lint": "eslint .",
+      "test": "sanity check"
+    },
+    "dependencies": {
+      "@sanity/base": "^2.7.4",
+      "@sanity/cli": "^2.7.4",
+      "@sanity/components": "^2.2.6",
+      "@sanity/core": "^2.7.4",
+      "@sanity/dashboard": "^2.7.0",
+      "@sanity/default-layout": "^2.7.4",
+      "@sanity/default-login": "^2.7.0",
+      "@sanity/desk-tool": "^2.7.4",
+      "@sanity/studio-hints": "^2.7.0",
+      "date-fns": "^2.19.0",
+      "prop-types": "^15.7.2",
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2",
+      "react-icons": "^3.11.0",
+      "sanity-plugin-dashboard-widget-document-list": "^0.0.13",
+      "sanity-plugin-dashboard-widget-netlify": "^1.0.1"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
