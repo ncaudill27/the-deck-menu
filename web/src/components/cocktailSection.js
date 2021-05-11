@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import Header from '../components/sectionHeader'
 import Spread from '../components/spread'
 import Name from '../components/itemName'
 import Price from '../components/itemPrice'
@@ -29,10 +28,6 @@ const CocktailSection = ({list}) => (
 
 const Cocktail = styled.article`
   
-`
-
-const Ingredient = styled.p`
-  margin: 0;
 `
 
 CocktailSection.propTypes = {

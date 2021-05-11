@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import Header from '../components/sectionHeader'
 import Spread from '../components/spread'
 import Name from '../components/itemName'
 import Context from '../components/itemContext'
@@ -25,10 +24,6 @@ const BeerSection = ({list}) => (
       ))}
   </DrinkSection>
 )
-
-const ListWrapper = styled.div`
-  
-`
 
 const Beer = styled.article`
   
