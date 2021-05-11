@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
 
+import Logo from "../images/svg/main_logo.svg";
 import CoffeeWrapper from './coffeeWrapper'
 import Section from '../components/coffeeSection'
 import LogoArray from '../components/logoArray'
@@ -9,21 +10,14 @@ import LogoArray from '../components/logoArray'
 const CoffeeList = ({brewed, espresso, other, pastry}) => (
   <CoffeeWrapper>
     <HeaderWrapper>
-      <StaticImage
-        src="../images/main_logo.png"
-        width={150}
-        height={150}
-        quality={100}
-        formats={["AUTO", "WEBP", "AVIF"]}
-        alt="The Deck Logo"
-      />
+      <Logo style={{width: '100%', height: '100%'}} />
     </HeaderWrapper>
     <ColumnWrapper>
       <Section title='Brewed Coffee' list={brewed} />
       <Section title='Espresso Drink' list={espresso} />
       <Section title='Other Beverages' list={other} />
       <Section title='Pastries' list={pastry} />
-      <LogoArray />
+      {/* <LogoArray /> */}
     </ColumnWrapper>
   </CoffeeWrapper>
 )
@@ -41,7 +35,8 @@ const ColumnWrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: calc(7in + 32px);
+  /* height: calc(7in + 32px); */
+  height: calc(7in);
 `
 
 export default CoffeeList
