@@ -32,7 +32,7 @@ export const query = graphql`
     food: allSanityFood(
         filter: {is_dessert: {ne: true}, is_kid_menu: {ne: true}},
         sort: {order: ASC, fields: order}
-      ) {
+    ) {
       edges {
         node {
           id
@@ -50,7 +50,7 @@ export const query = graphql`
     kids: allSanityFood(
         filter: {is_kid_menu: {eq: true}},
         sort: {order: ASC, fields: order}
-      ) {
+    ) {
       edges {
         node {
           id
@@ -67,7 +67,7 @@ export const query = graphql`
     dessert: allSanityFood(
         filter: {is_dessert: {eq: true}},
         sort: {order: ASC, fields: order}
-      ) {
+    ) {
       edges {
         node {
           id

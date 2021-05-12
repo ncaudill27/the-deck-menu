@@ -80,7 +80,7 @@ export const query = graphql`
     espresso: allSanityCoffee(
         filter: {type: {eq: "espresso"}},
         sort: {order: ASC, fields: order}
-      ) {
+    ) {
       edges {
         node {
           id
@@ -93,7 +93,7 @@ export const query = graphql`
     other: allSanityCoffee(
         filter: {type: {eq: "other"}},
         sort: {order: ASC, fields: order}
-      ) {
+    ) {
       edges {
         node {
           id
@@ -106,7 +106,7 @@ export const query = graphql`
     pastry: allSanityCoffee(
         filter: {type: {eq: "pastry"}},
         sort: {order: ASC, fields: order}
-      ) {
+    ) {
       edges {
         node {
           id
