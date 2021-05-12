@@ -64,7 +64,10 @@ const MenuWrapper = styled(LetterheadWrapper)`
 
 export const query = graphql`
   query {
-    draft: allSanityBeer(filter: {draft: {eq: true}}) {
+    draft: allSanityBeer(
+      filter: {draft: {eq: true}},
+      sort: {order: ASC, fields: order}
+    ) {
       edges {
         node {
           name
@@ -73,7 +76,10 @@ export const query = graphql`
         }
       }
     }
-    beer: allSanityBeer(filter: {draft: {eq: false}}) {
+    beer: allSanityBeer(
+      filter: {draft: {eq: false}},
+      sort: {order: ASC, fields: order}
+    ) {
       edges {
         node {
           name
@@ -83,7 +89,10 @@ export const query = graphql`
         }
       }
     }
-    red: allSanityWine(filter: {type: {eq: "red"}}) {
+    red: allSanityWine(
+      filter: {type: {eq: "red"}},
+      sort: {order: ASC, fields: order}
+    ) {
       edges {
         node {
           price_glass
@@ -94,7 +103,10 @@ export const query = graphql`
         }
       }
     }
-    white: allSanityWine(filter: {type: {eq: "wine"}}) {
+    white: allSanityWine(
+      filter: {type: {eq: "wine"}},
+      sort: {order: ASC, fields: order}
+    ) {
       edges {
         node {
           price_glass
@@ -105,7 +117,10 @@ export const query = graphql`
         }
       }
     }
-    sparkling: allSanityWine(filter: {type: {eq: "sparkling"}}) {
+    sparkling: allSanityWine(
+      filter: {type: {eq: "sparkling"}},
+      sort: {order: ASC, fields: order}
+    ) {
       edges {
         node {
           price_glass

@@ -64,7 +64,10 @@ const CutLine = styled.div`
 
 export const query = graphql`
   query {
-    brewed: allSanityCoffee(filter: {type: {eq: "brewed"}}) {
+    brewed: allSanityCoffee(
+        filter: {type: {eq: "brewed"}},
+        sort: {order: ASC, fields: order}
+      ) {
       edges {
         node {
           id
@@ -74,7 +77,10 @@ export const query = graphql`
         }
       }
     }
-    espresso: allSanityCoffee(filter: {type: {eq: "espresso"}}) {
+    espresso: allSanityCoffee(
+        filter: {type: {eq: "espresso"}},
+        sort: {order: ASC, fields: order}
+      ) {
       edges {
         node {
           id
@@ -84,7 +90,10 @@ export const query = graphql`
         }
       }
     }
-    other: allSanityCoffee(filter: {type: {eq: "other"}}) {
+    other: allSanityCoffee(
+        filter: {type: {eq: "other"}},
+        sort: {order: ASC, fields: order}
+      ) {
       edges {
         node {
           id
@@ -94,7 +103,10 @@ export const query = graphql`
         }
       }
     }
-    pastry: allSanityCoffee(filter: {type: {eq: "pastry"}}) {
+    pastry: allSanityCoffee(
+        filter: {type: {eq: "pastry"}},
+        sort: {order: ASC, fields: order}
+      ) {
       edges {
         node {
           id
