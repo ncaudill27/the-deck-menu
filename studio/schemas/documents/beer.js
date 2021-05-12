@@ -23,6 +23,12 @@ export default {
       type: "string",
       title: "Price",
       validation: Rule => Rule.regex(/\./).error('Be sure to add the full price. eg: 3.00')
-    }
+    },
+    {
+      name: "order",
+      title: "Order",
+      type: "number",
+      hidden: true,
+    },
   ],
 };

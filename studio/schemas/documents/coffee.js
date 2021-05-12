@@ -30,6 +30,12 @@ export default {
         layout: 'radio'
       }
     },
+    {
+      name: "order",
+      title: "Order",
+      type: "number",
+      hidden: true,
+    },
     // {
     //   name: "categories",
     //   type: "array",

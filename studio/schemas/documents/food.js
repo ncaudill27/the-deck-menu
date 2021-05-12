@@ -50,6 +50,12 @@ export default {
       type: "mainImage",
       title: "Main image",
     },
+    {
+      name: "order",
+      title: "Order",
+      type: "number",
+      hidden: true,
+    },
     // {
     //   name: "categories",
     //   type: "array",
