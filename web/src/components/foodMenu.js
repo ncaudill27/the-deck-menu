@@ -8,6 +8,7 @@ import LetterheadWrapper from '../components/letterheadWrapper';
 import Header from './sectionHeader'
 import FoodItem from './foodItem';
 import FoodStack from './foodStack';
+import LogoArray from './logoArray'
 
 const FoodMenu = ({foodList, kidsList, dessertList}) => {
   const menuEl = useRef()
@@ -16,7 +17,6 @@ const FoodMenu = ({foodList, kidsList, dessertList}) => {
     content: () => menuEl.current
   })
 
-  console.log(foodList)
   // split foodList into 3 separate array to stack more nicely
   let m, n
   let first, second, third
@@ -60,6 +60,9 @@ const FoodMenu = ({foodList, kidsList, dessertList}) => {
               alt="The Deck Logo"
             />
           </LogoWrapper>
+          <LogoArrayWrapper>
+            <LogoArray />
+          </LogoArrayWrapper>
         </WhiteBackground>
       </MenuWrapper>
     </div>
@@ -98,6 +101,13 @@ const SpacerLine = styled.div`
   position: relative;
   background-color: black;
   margin-bottom: 8px;
+`
+
+const LogoArrayWrapper = styled.div`
+  position: absolute;
+  width: 268px;
+  bottom: 24px;
+  right: 24px;
 `
 
 export default FoodMenu
