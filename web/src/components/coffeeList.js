@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Logo from "../images/svg/main_logo.svg";
 import CoffeeWrapper from './coffeeWrapper'
 import Section from '../components/coffeeSection'
-// import LogoArray from '../components/logoArray'
+import LogoArray from '../components/logoArray'
 
 const CoffeeList = ({brewed, espresso, other, pastry}) => (
   <CoffeeWrapper>
@@ -16,7 +16,7 @@ const CoffeeList = ({brewed, espresso, other, pastry}) => (
       <Section title='Espresso Drink' list={espresso} />
       <Section title='Other Beverages' list={other} />
       <Section title='Pastries' list={pastry} />
-      {/* <LogoArray /> */}
+      <LogoArray />
     </ColumnWrapper>
   </CoffeeWrapper>
 )

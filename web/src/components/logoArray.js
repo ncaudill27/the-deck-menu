@@ -2,41 +2,23 @@ import React from 'react'
 import styled from 'styled-components'
 import { StaticImage } from "gatsby-plugin-image"
 
-import Spread from './spread'
+import Spread from '../components/spread'
+import BullLogo from '../images/svg/bull_logo.svg'
+import FitzroyLogo from '../images/svg/fitzroy_logo.svg'
+import ParkLogo from '../images/svg/forsyth_logo.svg'
 
 const LogoArray = () => (
-  <Grid>
+  <Spread>
     <ImageWrapper>
-      <StaticImage
-        src="../images/bull_logo.png"
-        width={67}
-        height={73}
-        quality={100}
-        formats={["AUTO", "WEBP", "AVIF"]}
-        alt="The Collins Quarter Logo"
-      />
+      <BullLogo />
     </ImageWrapper>
     <ImageWrapper>
-      <StaticImage
-        src="../images/fitzroy_logo.jpg"
-        width={67}
-        height={64}
-        quality={100}
-        formats={["AUTO", "WEBP", "AVIF"]}
-        alt="The Fitzroy logo"
-      />
+      <FitzroyLogo />
     </ImageWrapper>
     <ImageWrapper>
-      <StaticImage
-        src="../images/forsyth_logo.jpg"
-        width={67}
-        height={73}
-        quality={100}
-        formats={["AUTO", "WEBP", "AVIF"]}
-        alt="The Collins Quarter at Forsyth logo"
-      />
+      <ParkLogo />
     </ImageWrapper>
-  </Grid>
+  </Spread>
 )
 
 const Grid = styled.div`
@@ -45,7 +27,9 @@ const Grid = styled.div`
 `
 
 const ImageWrapper = styled.div`
+  width: 73px;
   height: 73px;
+
   display: flex;
   justify-content: center;
   align-items: center;
