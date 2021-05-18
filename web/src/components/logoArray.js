@@ -9,13 +9,13 @@ import ParkLogo from '../images/svg/forsyth_logo.svg'
 const LogoArray = () => (
   <Spread>
     <ImageWrapper>
-      <BullLogo />
+      <BullLogo style={{width: '73px', height: '73px'}} />
     </ImageWrapper>
     <ImageWrapper>
-      <FitzroyLogo />
+      <FitzroyLogo style={{width: '73px', height: '73px'}} />
     </ImageWrapper>
     <ImageWrapper>
-      <ParkLogo />
+      <ParkLogo style={{width: '73px', height: '73px'}} />
     </ImageWrapper>
   </Spread>
 )
