@@ -8,6 +8,7 @@ import LetterheadWrapper from '../components/letterheadWrapper';
 import Header from './sectionHeader'
 import FoodItem from './foodItem';
 import FoodStack from './foodStack';
+import Logo from '../images/svg/main_logo.svg'
 import LogoArray from './logoArray'
 
 const FoodMenu = ({foodList, kidsList, dessertList}) => {
@@ -51,14 +52,7 @@ const FoodMenu = ({foodList, kidsList, dessertList}) => {
             </FoodStack>
           </FoodWrapper>        
           <LogoWrapper>
-            <StaticImage
-              src="../images/main_logo.png"
-              width={150}
-              height={150}
-              quality={100}
-              formats={["AUTO", "WEBP", "AVIF"]}
-              alt="The Deck Logo"
-            />
+            <Logo style={{width: '100%', height: '100%'}} />
           </LogoWrapper>
           <LogoArrayWrapper>
             <LogoArray />
